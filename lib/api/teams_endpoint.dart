@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:os_sports_client/models/api_response.dart';
-import 'package:os_sports_client/models/shared/course_events.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 import 'package:os_sports_client/models/teams/goals_distribution/goals_distribution.dart';
 import 'package:os_sports_client/models/teams/team_current_tournamet/team_current_tournament.dart';
 import 'package:os_sports_client/models/teams/team_events/team_events.dart';

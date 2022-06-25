@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:os_sports_client/models/api_response.dart';
-import 'package:os_sports_client/models/shared/course_events.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 import 'package:os_sports_client/models/tournaments/featured_event/featured_event.dart';
 import 'package:os_sports_client/models/tournaments/media/media.dart';
 import 'package:os_sports_client/models/tournaments/rich_unique_tournament/rich_unique_tournament.dart';

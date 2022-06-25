@@ -3,7 +3,7 @@ import 'package:os_sports_client/models/api_response.dart';
 import 'package:os_sports_client/models/managers/manager/manager.dart';
 import 'package:os_sports_client/models/managers/manager_events/manager_events.dart';
 import 'package:os_sports_client/models/managers/manager_history/manager_history.dart';
-import 'package:os_sports_client/models/shared/course_events.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'managers_endpoint.g.dart';

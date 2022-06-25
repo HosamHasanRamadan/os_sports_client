@@ -3,7 +3,7 @@ import 'package:os_sports_client/models/api_response.dart';
 import 'package:os_sports_client/models/ref/referee/referee.dart';
 import 'package:os_sports_client/models/ref/referees/referee_event.dart';
 import 'package:os_sports_client/models/ref/stats/referee_statistics.dart';
-import 'package:os_sports_client/models/shared/course_events.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 
 import 'package:retrofit/retrofit.dart';
 

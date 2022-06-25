@@ -12,7 +12,7 @@ import 'package:os_sports_client/models/players/player_season_heatmap/player_sea
 import 'package:os_sports_client/models/players/player_season_statistics/player_season_statistics.dart';
 import 'package:os_sports_client/models/players/player_attribute_overview/player_attribute_overview.dart';
 import 'package:os_sports_client/models/players/player_transfer/player_transfer.dart';
-import 'package:os_sports_client/models/shared/course_events.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'players_endpoint.g.dart';
@@ -96,12 +96,4 @@ abstract class PlayersEndpoint {
   Future<ApiResponse<Player>> getPlayer({
     @Query('player_id') required int playerId,
   });
-}
-
-enum PlayerStatType {
-  home,
-  away,
-  overall;
-
-  String toJson() => name;
 }

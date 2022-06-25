@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:os_sports_client/api/typed_query_params.dart';
 import 'package:os_sports_client/models/api_response.dart';
 import 'package:os_sports_client/models/seasons/season_cup_tree/season_cup_tree.dart';
 import 'package:os_sports_client/models/seasons/season_events/season_events.dart';
@@ -81,19 +82,4 @@ abstract class SeasonsEndpoint {
     @Query('unique_tournament_id') required int uniqueTournamentId,
     @Query('seasons_id') required int seasonsId,
   });
-}
-
-enum StandingType {
-  total,
-  home,
-  away;
-
-  String toJson() => name;
-}
-
-enum SeasonsStatisticsType {
-  overall,
-  regularSeason;
-
-  String toJson() => name;
 }

@@ -20,6 +20,8 @@ import 'package:os_sports_client/models/events/streaks/streaks.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:os_sports_client/extensions/date_time_x.dart';
 
+import 'typed_query_params.dart';
+
 part 'events_endpoint.g.dart';
 
 const _basePath = 'events';
@@ -127,18 +129,4 @@ abstract class EventsEndpoint {
   Future<ApiResponse<List<H2HEvent>>> getH2HEvents({
     @Query('custom_event_id') required String customEventId,
   });
-}
-
-enum TeamType {
-  home,
-  away;
-
-  String toJson() => name;
-}
-
-enum TeamPlayer {
-  player,
-  goalkeeper;
-
-  String toJson() => name;
 }
