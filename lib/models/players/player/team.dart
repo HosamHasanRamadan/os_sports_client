@@ -4,7 +4,7 @@ import 'country.dart';
 import 'primary_unique_tournament.dart';
 import 'package:os_sports_client/models/shared/sport.dart';
 
-import 'team_colors.dart';
+import 'package:os_sports_client/models/shared/team_colors.dart';
 import 'tournament.dart';
 
 part 'team.g.dart';
