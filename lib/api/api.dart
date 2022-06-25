@@ -1,0 +1,13 @@
+export 'calendar_endpoint.dart';
+export 'categories_endpoint.dart';
+export 'events_endpoint.dart';
+export 'managers_endpoint.dart';
+export 'players_endpoint.dart';
+export 'rankings_endpoint.dart';
+export 'referees_endpoint.dart';
+export 'seasons_endpoint.dart';
+export 'teams_endpoint.dart';
+export 'tournaments_endpoint.dart';
+export 'transfers_endpoint.dart';
+export 'translations_endpoint.dart';
+export 'tv_endpoint.dart';
