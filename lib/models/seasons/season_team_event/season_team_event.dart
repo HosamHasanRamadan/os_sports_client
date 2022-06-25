@@ -1,9 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'away_score.dart';
-import 'away_team.dart';
-import 'home_score.dart';
-import 'home_team.dart';
+import 'score.dart';
+import 'team.dart';
 import 'status.dart';
 import 'tournament.dart';
 
@@ -15,10 +13,10 @@ class SeasonTeamEvent {
   final String? customId;
   final Status? status;
   final int? winnerCode;
-  final HomeTeam? homeTeam;
-  final AwayTeam? awayTeam;
-  final HomeScore? homeScore;
-  final AwayScore? awayScore;
+  final Team? homeTeam;
+  final Team? awayTeam;
+  final Score? homeScore;
+  final Score? awayScore;
   final int? id;
   final int? startTimestamp;
   final String? slug;

@@ -1,10 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'away_score.dart';
-import 'away_team.dart';
+import 'score.dart';
+import 'team.dart';
 import 'changes.dart';
-import 'home_score.dart';
-import 'home_team.dart';
 import 'round_info.dart';
 import 'status.dart';
 import 'time.dart';
@@ -19,10 +17,10 @@ class Event {
   final String? customId;
   final Status? status;
   final int? winnerCode;
-  final HomeTeam? homeTeam;
-  final AwayTeam? awayTeam;
-  final HomeScore? homeScore;
-  final AwayScore? awayScore;
+  final Team? homeTeam;
+  final Team? awayTeam;
+  final Score? homeScore;
+  final Score? awayScore;
   final int? coverage;
   final Time? time;
   final Changes? changes;

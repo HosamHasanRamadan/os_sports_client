@@ -1,11 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:os_sports_client/converters/converter.dart';
 
-import 'away_score.dart';
-import 'away_team.dart';
+import 'score.dart';
+import 'team.dart';
 import 'changes.dart';
-import 'home_score.dart';
-import 'home_team.dart';
 import 'referee.dart';
 import 'round_info.dart';
 import 'season.dart';
@@ -26,10 +24,10 @@ class Event {
   final int? winnerCode;
   final Venue? venue;
   final Referee? referee;
-  final HomeTeam? homeTeam;
-  final AwayTeam? awayTeam;
-  final HomeScore? homeScore;
-  final AwayScore? awayScore;
+  final Team? homeTeam;
+  final Team? awayTeam;
+  final Score? homeScore;
+  final Score? awayScore;
   final Time? time;
   final Changes? changes;
   final bool? hasGlobalHighlights;

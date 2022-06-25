@@ -29,16 +29,16 @@ Event _$EventFromJson(Map<String, dynamic> json) => Event(
           : Referee.fromJson(json['referee'] as Map<String, dynamic>),
       homeTeam: json['homeTeam'] == null
           ? null
-          : HomeTeam.fromJson(json['homeTeam'] as Map<String, dynamic>),
+          : Team.fromJson(json['homeTeam'] as Map<String, dynamic>),
       awayTeam: json['awayTeam'] == null
           ? null
-          : AwayTeam.fromJson(json['awayTeam'] as Map<String, dynamic>),
+          : Team.fromJson(json['awayTeam'] as Map<String, dynamic>),
       homeScore: json['homeScore'] == null
           ? null
-          : HomeScore.fromJson(json['homeScore'] as Map<String, dynamic>),
+          : Score.fromJson(json['homeScore'] as Map<String, dynamic>),
       awayScore: json['awayScore'] == null
           ? null
-          : AwayScore.fromJson(json['awayScore'] as Map<String, dynamic>),
+          : Score.fromJson(json['awayScore'] as Map<String, dynamic>),
       time: json['time'] == null
           ? null
           : Time.fromJson(json['time'] as Map<String, dynamic>),
