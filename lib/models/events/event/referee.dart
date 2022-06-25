@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'country.dart';
-import 'sport.dart';
+import 'package:os_sports_client/models/shared/sport.dart';
 
 part 'referee.g.dart';
 

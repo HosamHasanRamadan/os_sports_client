@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'sport.dart';
+import 'package:os_sports_client/models/shared/sport.dart';
+
 import 'team_colors.dart';
 
 part 'away_team.g.dart';

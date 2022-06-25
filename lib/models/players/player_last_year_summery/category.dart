@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'sport.dart';
+import 'package:os_sports_client/models/shared/sport.dart';
 
 part 'category.g.dart';
 
