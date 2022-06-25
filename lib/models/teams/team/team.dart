@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'category.dart';
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
+
 import 'manager.dart';
 import 'primary_unique_tournament.dart';
 import 'package:os_sports_client/models/shared/sport.dart';

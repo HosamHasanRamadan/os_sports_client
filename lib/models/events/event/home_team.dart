@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
+
 import 'package:os_sports_client/models/shared/sport.dart';
 
 import 'package:os_sports_client/models/shared/team_colors.dart';

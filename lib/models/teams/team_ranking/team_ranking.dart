@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
+
 import 'team.dart';
 
 part 'team_ranking.g.dart';

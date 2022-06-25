@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:os_sports_client/converters/converter.dart';
 
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
+
 import 'proposed_market_value_raw.dart';
 import 'team.dart';
 

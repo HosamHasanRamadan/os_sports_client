@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'city.dart';
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
+
 import 'stadium.dart';
 
 part 'venue.g.dart';

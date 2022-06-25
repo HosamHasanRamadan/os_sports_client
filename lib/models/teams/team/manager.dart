@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'country.dart';
+import 'package:os_sports_client/models/shared/country.dart';
 
 part 'manager.g.dart';
 
