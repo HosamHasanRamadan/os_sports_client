@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'category.dart';
+import 'package:os_sports_client/models/shared/category.dart';
+
 import 'logo.dart';
 import 'lower_division.dart';
 import 'most_titles_team.dart';
