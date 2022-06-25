@@ -4,7 +4,8 @@ import 'score.dart';
 import 'team.dart';
 import 'changes.dart';
 import 'round_info.dart';
-import 'status.dart';
+import 'package:os_sports_client/models/shared/status.dart';
+
 import 'status_time.dart';
 import 'time.dart';
 import 'tournament.dart';

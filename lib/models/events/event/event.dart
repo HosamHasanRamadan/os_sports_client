@@ -7,7 +7,8 @@ import 'changes.dart';
 import 'referee.dart';
 import 'round_info.dart';
 import 'season.dart';
-import 'status.dart';
+import 'package:os_sports_client/models/shared/status.dart';
+
 import 'time.dart';
 import 'tournament.dart';
 import 'venue.dart';

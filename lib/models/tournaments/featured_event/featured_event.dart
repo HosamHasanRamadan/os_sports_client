@@ -2,7 +2,8 @@ import 'package:json_annotation/json_annotation.dart';
 
 import 'score.dart';
 import 'team.dart';
-import 'status.dart';
+import 'package:os_sports_client/models/shared/status.dart';
+
 import 'tournament.dart';
 
 part 'featured_event.g.dart';
