@@ -4,7 +4,7 @@ import 'package:os_sports_client/converters/converter.dart';
 import 'team.dart';
 import 'package:os_sports_client/models/shared/changes.dart';
 
-import 'score.dart';
+import 'package:os_sports_client/models/shared/score.dart';
 import 'round_info.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
