@@ -1,0 +1,273 @@
+[
+    {
+        "tournament": {
+            "name": "UEFA Champions League",
+            "slug": "uefa-champions-league",
+            "category": {
+                "name": "Europe",
+                "slug": "europe",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 1465,
+                "flag": "europe"
+            },
+            "uniqueTournament": {
+                "name": "UEFA Champions League",
+                "slug": "uefa-champions-league",
+                "category": {
+                    "name": "Europe",
+                    "slug": "europe",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 1465,
+                    "flag": "europe"
+                },
+                "userCount": 1025392,
+                "hasPositionGraph": false,
+                "id": 7,
+                "hasEventPlayerStatistics": true
+            },
+            "priority": 390,
+            "id": 23
+        },
+        "roundInfo": {
+            "round": 4,
+            "name": "Quarterfinal",
+            "slug": "quarterfinal",
+            "cupRoundType": 4
+        },
+        "customId": "NsEgb",
+        "status": {
+            "code": 100,
+            "description": "Ended",
+            "type": "finished"
+        },
+        "winnerCode": 2,
+        "homeTeam": {
+            "name": "Chelsea",
+            "slug": "chelsea",
+            "shortName": "Chelsea",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 887613,
+            "nameCode": "CHE",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 38,
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#0310a7",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            }
+        },
+        "awayTeam": {
+            "name": "Real Madrid",
+            "slug": "real-madrid",
+            "shortName": "Real Madrid",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 1250506,
+            "nameCode": "RMA",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 2829,
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#ffffff",
+                "secondary": "#004996",
+                "text": "#004996"
+            }
+        },
+        "homeScore": {
+            "current": 1,
+            "display": 1,
+            "period1": 1,
+            "period2": 0,
+            "normaltime": 1
+        },
+        "awayScore": {
+            "current": 3,
+            "display": 3,
+            "period1": 2,
+            "period2": 1,
+            "normaltime": 3
+        },
+        "coverage": 1,
+        "time": {
+            "injuryTime1": 1,
+            "injuryTime2": 5,
+            "currentPeriodStartTimestamp": 1649278391
+        },
+        "changes": {
+            "changes": [
+                "homeScore.period2",
+                "awayScore.period2"
+            ],
+            "changeTimestamp": 1651130133
+        },
+        "hasGlobalHighlights": false,
+        "hasEventPlayerStatistics": true,
+        "hasEventPlayerHeatMap": true,
+        "id": 10200677,
+        "startTimestamp": 1649271600,
+        "slug": "chelsea-real-madrid",
+        "finalResultOnly": false
+    },
+    {
+        "tournament": {
+            "name": "UEFA Champions League",
+            "slug": "uefa-champions-league",
+            "category": {
+                "name": "Europe",
+                "slug": "europe",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 1465,
+                "flag": "europe"
+            },
+            "uniqueTournament": {
+                "name": "UEFA Champions League",
+                "slug": "uefa-champions-league",
+                "category": {
+                    "name": "Europe",
+                    "slug": "europe",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 1465,
+                    "flag": "europe"
+                },
+                "userCount": 1025392,
+                "hasPositionGraph": false,
+                "id": 7,
+                "hasEventPlayerStatistics": true
+            },
+            "priority": 390,
+            "id": 23
+        },
+        "roundInfo": {
+            "round": 4,
+            "name": "Quarterfinal",
+            "slug": "quarterfinal",
+            "cupRoundType": 4
+        },
+        "customId": "NsEgb",
+        "status": {
+            "code": 110,
+            "description": "AET",
+            "type": "finished"
+        },
+        "winnerCode": 2,
+        "aggregatedWinnerCode": 1,
+        "homeTeam": {
+            "name": "Real Madrid",
+            "slug": "real-madrid",
+            "shortName": "Real Madrid",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 1250506,
+            "nameCode": "RMA",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 2829,
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#ffffff",
+                "secondary": "#004996",
+                "text": "#004996"
+            }
+        },
+        "awayTeam": {
+            "name": "Chelsea",
+            "slug": "chelsea",
+            "shortName": "Chelsea",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 887613,
+            "nameCode": "CHE",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 38,
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#0310a7",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            }
+        },
+        "homeScore": {
+            "current": 2,
+            "display": 2,
+            "period1": 0,
+            "period2": 1,
+            "normaltime": 1,
+            "extra1": 1,
+            "extra2": 0,
+            "overtime": 1,
+            "aggregated": 5
+        },
+        "awayScore": {
+            "current": 3,
+            "display": 3,
+            "period1": 1,
+            "period2": 2,
+            "normaltime": 3,
+            "extra1": 0,
+            "extra2": 0,
+            "overtime": 0,
+            "aggregated": 4
+        },
+        "coverage": 1,
+        "time": {
+            "currentPeriodStartTimestamp": 1649798084
+        },
+        "changes": {
+            "changes": [
+                "time.injuryTime1",
+                "time.injuryTime2",
+                "time.injuryTime4"
+            ],
+            "changeTimestamp": 1655127607
+        },
+        "hasGlobalHighlights": false,
+        "hasEventPlayerStatistics": true,
+        "hasEventPlayerHeatMap": true,
+        "id": 10200675,
+        "previousLegEventId": 10200677,
+        "startTimestamp": 1649790000,
+        "slug": "chelsea-real-madrid",
+        "finalResultOnly": false
+    }
+]
