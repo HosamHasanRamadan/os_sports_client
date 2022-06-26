@@ -3,7 +3,8 @@ import 'package:os_sports_client/converters/converter.dart';
 
 import 'score.dart';
 import 'team.dart';
-import 'changes.dart';
+import 'package:os_sports_client/models/shared/changes.dart';
+
 import 'referee.dart';
 import 'round_info.dart';
 import 'season.dart';

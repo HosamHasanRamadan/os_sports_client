@@ -1,7 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'score.dart';
-import 'changes.dart';
+import 'package:os_sports_client/models/shared/changes.dart';
+
 import 'team.dart';
 import 'round_info.dart';
 import 'package:os_sports_client/models/shared/status.dart';
