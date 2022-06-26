@@ -11,7 +11,8 @@ import 'season.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
 import 'time.dart';
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
+
 import 'venue.dart';
 
 part 'event.g.dart';

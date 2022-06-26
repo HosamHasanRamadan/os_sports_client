@@ -3,7 +3,7 @@ import 'package:os_sports_client/converters/converter.dart';
 
 import 'row.dart';
 import 'tie_breaking_rule.dart';
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'season_standing.g.dart';
 

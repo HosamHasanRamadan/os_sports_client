@@ -10,7 +10,8 @@ import 'primary_unique_tournament.dart';
 import 'package:os_sports_client/models/shared/sport.dart';
 
 import 'package:os_sports_client/models/shared/team_colors.dart';
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
+
 import 'venue.dart';
 
 part 'team.g.dart';

@@ -5,7 +5,7 @@ import 'score.dart';
 import 'team.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'season_team_event.g.dart';
 

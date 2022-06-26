@@ -3,7 +3,7 @@ import 'package:os_sports_client/models/shared/shared.dart';
 import 'package:os_sports_client/models/shared/unique_tournament.dart';
 import 'package:os_sports_client/models/shared/category.dart';
 
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'team.g.dart';
 

@@ -9,7 +9,7 @@ import 'round_info.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
 import 'time.dart';
-import 'tournament.dart';
+import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'referee_event.g.dart';
 
