@@ -36,26 +36,26 @@ class _TournamentsEndpoint implements TournamentsEndpoint {
   }
 
   @override
-  Future<ApiResponse<dynamic>> getData({required tournamentId}) async {
+  Future<ApiResponse<Tournament>> getData({required tournamentId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'tournament_id': tournamentId};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<dynamic>>(
+        _setStreamType<ApiResponse<Tournament>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/tournaments/data',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<dynamic>.fromJson(
+    final value = ApiResponse<Tournament>.fromJson(
       _result.data!,
-      (json) => json as dynamic,
+      (json) => Tournament.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
 
   @override
-  Future<ApiResponse<dynamic>> getTournamentEvents(
+  Future<ApiResponse<Tournament>> getTournamentEvents(
       {required page, required courseEvents, required tournamentId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
@@ -66,14 +66,14 @@ class _TournamentsEndpoint implements TournamentsEndpoint {
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<dynamic>>(
+        _setStreamType<ApiResponse<Tournament>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
                 .compose(_dio.options, '/tournaments/data',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<dynamic>.fromJson(
+    final value = ApiResponse<Tournament>.fromJson(
       _result.data!,
-      (json) => json as dynamic,
+      (json) => Tournament.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
