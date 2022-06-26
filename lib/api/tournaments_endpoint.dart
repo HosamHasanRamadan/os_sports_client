@@ -9,7 +9,7 @@ import 'package:os_sports_client/models/tournaments/tournament_item/tournament_i
 
 import 'package:os_sports_client/models/tournaments/tournament_seasons/tournament_seasons.dart';
 import 'package:os_sports_client/models/tournaments/tournament/tournament.dart';
-import 'package:os_sports_client/models/tournaments/unique_tournament/unique_tournament.dart';
+import 'package:os_sports_client/models/shared/unique_tournament.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'tournaments_endpoint.g.dart';
