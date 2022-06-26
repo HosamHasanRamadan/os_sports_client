@@ -41,7 +41,8 @@ PreviousEvent _$PreviousEventFromJson(Map<String, dynamic> json) =>
       hasEventPlayerStatistics: json['hasEventPlayerStatistics'] as bool?,
       hasEventPlayerHeatMap: json['hasEventPlayerHeatMap'] as bool?,
       id: json['id'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
     );
@@ -63,7 +64,8 @@ Map<String, dynamic> _$PreviousEventToJson(PreviousEvent instance) =>
       'hasEventPlayerStatistics': instance.hasEventPlayerStatistics,
       'hasEventPlayerHeatMap': instance.hasEventPlayerHeatMap,
       'id': instance.id,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
     };

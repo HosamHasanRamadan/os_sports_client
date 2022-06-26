@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'package:os_sports_client/models/shared/category.dart';
 
@@ -36,7 +37,8 @@ class Team {
   final Country? country;
   final String? fullName;
   final TeamColors? teamColors;
-  final int? foundationDateTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? foundationDateTimestamp;
 
   const Team({
     this.name,

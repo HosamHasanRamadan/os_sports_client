@@ -43,7 +43,8 @@ H2HEvent _$H2HEventFromJson(Map<String, dynamic> json) => H2HEvent(
       hasEventPlayerHeatMap: json['hasEventPlayerHeatMap'] as bool?,
       id: json['id'] as int?,
       previousLegEventId: json['previousLegEventId'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
     );
@@ -67,7 +68,8 @@ Map<String, dynamic> _$H2HEventToJson(H2HEvent instance) => <String, dynamic>{
       'hasEventPlayerHeatMap': instance.hasEventPlayerHeatMap,
       'id': instance.id,
       'previousLegEventId': instance.previousLegEventId,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
     };

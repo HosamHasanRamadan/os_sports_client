@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'team_latest_media.g.dart';
 
@@ -6,13 +7,14 @@ part 'team_latest_media.g.dart';
 class TeamLatestMedia {
   final String? title;
   final String? subtitle;
-  final String? url;
+  final Uri? url;
   final int? mediaType;
   final List<String>? forCountries;
   final bool? doFollow;
   final int? id;
-  final int? createdAtTimestamp;
-  final String? sourceUrl;
+  @TimestampEpochConverter()
+  final DateTime? createdAtTimestamp;
+  final Uri? sourceUrl;
 
   const TeamLatestMedia({
     this.title,

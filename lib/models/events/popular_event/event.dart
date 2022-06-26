@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'package:os_sports_client/models/shared/changes.dart';
 
@@ -28,7 +29,8 @@ class Event {
   final bool? hasGlobalHighlights;
   final bool? hasEventPlayerStatistics;
   final int? id;
-  final int? startTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startTimestamp;
   final String? slug;
   final bool? finalResultOnly;
 

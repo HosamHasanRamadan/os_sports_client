@@ -14,14 +14,18 @@ ManagerHistory _$ManagerHistoryFromJson(Map<String, dynamic> json) =>
       performance: json['performance'] == null
           ? null
           : Performance.fromJson(json['performance'] as Map<String, dynamic>),
-      startTimestamp: json['startTimestamp'] as int?,
-      endTimestamp: json['endTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
+      endTimestamp: const TimestampEpochConverter()
+          .fromJson(json['endTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$ManagerHistoryToJson(ManagerHistory instance) =>
     <String, dynamic>{
       'team': instance.team,
       'performance': instance.performance,
-      'startTimestamp': instance.startTimestamp,
-      'endTimestamp': instance.endTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
+      'endTimestamp':
+          const TimestampEpochConverter().toJson(instance.endTimestamp),
     };

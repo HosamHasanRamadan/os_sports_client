@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'package:os_sports_client/models/shared/country.dart';
 
@@ -21,7 +22,8 @@ class TeamPlayer {
   final int? id;
   final Country? country;
   final int? shirtNumber;
-  final int? dateOfBirthTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? dateOfBirthTimestamp;
   final int? proposedMarketValue;
   final ProposedMarketValueRaw? proposedMarketValueRaw;
 

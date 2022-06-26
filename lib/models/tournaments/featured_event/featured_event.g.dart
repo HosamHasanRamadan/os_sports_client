@@ -29,7 +29,8 @@ FeaturedEvent _$FeaturedEventFromJson(Map<String, dynamic> json) =>
           ? null
           : Score.fromJson(json['awayScore'] as Map<String, dynamic>),
       id: json['id'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
     );
@@ -45,7 +46,8 @@ Map<String, dynamic> _$FeaturedEventToJson(FeaturedEvent instance) =>
       'homeScore': instance.homeScore,
       'awayScore': instance.awayScore,
       'id': instance.id,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
     };

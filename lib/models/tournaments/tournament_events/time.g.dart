@@ -7,9 +7,11 @@ part of 'time.dart';
 // **************************************************************************
 
 Time _$TimeFromJson(Map<String, dynamic> json) => Time(
-      currentPeriodStartTimestamp: json['currentPeriodStartTimestamp'] as int?,
+      currentPeriodStartTimestamp: const TimestampEpochConverter()
+          .fromJson(json['currentPeriodStartTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$TimeToJson(Time instance) => <String, dynamic>{
-      'currentPeriodStartTimestamp': instance.currentPeriodStartTimestamp,
+      'currentPeriodStartTimestamp': const TimestampEpochConverter()
+          .toJson(instance.currentPeriodStartTimestamp),
     };

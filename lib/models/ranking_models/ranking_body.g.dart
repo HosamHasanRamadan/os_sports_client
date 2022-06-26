@@ -12,7 +12,8 @@ RankingBody<T> _$RankingBodyFromJson<T>(
 ) =>
     RankingBody<T>(
       rankings: (json['rankings'] as List<dynamic>?)?.map(fromJsonT).toList(),
-      updatedAtTimestamp: json['updatedAtTimestamp'] as int?,
+      updatedAtTimestamp: const TimestampEpochConverter()
+          .fromJson(json['updatedAtTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$RankingBodyToJson<T>(
@@ -21,5 +22,6 @@ Map<String, dynamic> _$RankingBodyToJson<T>(
 ) =>
     <String, dynamic>{
       'rankings': instance.rankings?.map(toJsonT).toList(),
-      'updatedAtTimestamp': instance.updatedAtTimestamp,
+      'updatedAtTimestamp':
+          const TimestampEpochConverter().toJson(instance.updatedAtTimestamp),
     };

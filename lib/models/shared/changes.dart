@@ -1,11 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'changes.g.dart';
 
 @JsonSerializable()
 class Changes {
   final List<String>? changes;
-  final int? changeTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? changeTimestamp;
 
   const Changes({this.changes, this.changeTimestamp});
 

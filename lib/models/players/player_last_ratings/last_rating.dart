@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'opponent.dart';
 
@@ -7,7 +8,8 @@ part 'last_rating.g.dart';
 @JsonSerializable()
 class LastRating {
   final int? eventId;
-  final int? startTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startTimestamp;
   final double? rating;
   final Opponent? opponent;
   final bool? isHome;

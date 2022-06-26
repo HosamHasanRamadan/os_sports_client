@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'season_team_week_round.g.dart';
 
@@ -7,7 +8,8 @@ class SeasonTeamWeekRound {
   final String? roundName;
   final String? roundSlug;
   final int? id;
-  final int? createdAtTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? createdAtTimestamp;
 
   const SeasonTeamWeekRound({
     this.roundName,

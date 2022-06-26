@@ -16,7 +16,8 @@ EventMedia _$EventMediaFromJson(Map<String, dynamic> json) => EventMedia(
           .toList(),
       doFollow: json['doFollow'] as bool?,
       id: json['id'] as int?,
-      createdAtTimestamp: json['createdAtTimestamp'] as int?,
+      createdAtTimestamp: const TimestampEpochConverter()
+          .fromJson(json['createdAtTimestamp'] as int?),
       sourceUrl: json['sourceUrl'] == null
           ? null
           : Uri.parse(json['sourceUrl'] as String),
@@ -31,6 +32,7 @@ Map<String, dynamic> _$EventMediaToJson(EventMedia instance) =>
       'forCountries': instance.forCountries,
       'doFollow': instance.doFollow,
       'id': instance.id,
-      'createdAtTimestamp': instance.createdAtTimestamp,
+      'createdAtTimestamp':
+          const TimestampEpochConverter().toJson(instance.createdAtTimestamp),
       'sourceUrl': instance.sourceUrl?.toString(),
     };

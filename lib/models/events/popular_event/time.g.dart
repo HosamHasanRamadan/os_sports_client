@@ -11,7 +11,8 @@ Time _$TimeFromJson(Map<String, dynamic> json) => Time(
       periodLength: json['periodLength'] as int?,
       overtimeLength: json['overtimeLength'] as int?,
       totalPeriodCount: json['totalPeriodCount'] as int?,
-      currentPeriodStartTimestamp: json['currentPeriodStartTimestamp'] as int?,
+      currentPeriodStartTimestamp: const TimestampEpochConverter()
+          .fromJson(json['currentPeriodStartTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$TimeToJson(Time instance) => <String, dynamic>{
@@ -19,5 +20,6 @@ Map<String, dynamic> _$TimeToJson(Time instance) => <String, dynamic>{
       'periodLength': instance.periodLength,
       'overtimeLength': instance.overtimeLength,
       'totalPeriodCount': instance.totalPeriodCount,
-      'currentPeriodStartTimestamp': instance.currentPeriodStartTimestamp,
+      'currentPeriodStartTimestamp': const TimestampEpochConverter()
+          .toJson(instance.currentPeriodStartTimestamp),
     };

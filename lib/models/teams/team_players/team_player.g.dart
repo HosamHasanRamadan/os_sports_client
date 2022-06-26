@@ -23,7 +23,8 @@ TeamPlayer _$TeamPlayerFromJson(Map<String, dynamic> json) => TeamPlayer(
           ? null
           : Country.fromJson(json['country'] as Map<String, dynamic>),
       shirtNumber: json['shirtNumber'] as int?,
-      dateOfBirthTimestamp: json['dateOfBirthTimestamp'] as int?,
+      dateOfBirthTimestamp: const TimestampEpochConverter()
+          .fromJson(json['dateOfBirthTimestamp'] as int?),
       proposedMarketValue: json['proposedMarketValue'] as int?,
       proposedMarketValueRaw: json['proposedMarketValueRaw'] == null
           ? null
@@ -45,7 +46,8 @@ Map<String, dynamic> _$TeamPlayerToJson(TeamPlayer instance) =>
       'id': instance.id,
       'country': instance.country,
       'shirtNumber': instance.shirtNumber,
-      'dateOfBirthTimestamp': instance.dateOfBirthTimestamp,
+      'dateOfBirthTimestamp':
+          const TimestampEpochConverter().toJson(instance.dateOfBirthTimestamp),
       'proposedMarketValue': instance.proposedMarketValue,
       'proposedMarketValueRaw': instance.proposedMarketValueRaw,
     };

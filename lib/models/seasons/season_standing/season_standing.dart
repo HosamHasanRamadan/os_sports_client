@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'row.dart';
 import 'tie_breaking_rule.dart';
@@ -15,7 +16,8 @@ class SeasonStanding {
   final TieBreakingRule? tieBreakingRule;
   final List<Row>? rows;
   final int? id;
-  final int? updatedAtTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? updatedAtTimestamp;
 
   const SeasonStanding({
     this.tournament,

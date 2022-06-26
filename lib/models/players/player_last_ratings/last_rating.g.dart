@@ -8,7 +8,8 @@ part of 'last_rating.dart';
 
 LastRating _$LastRatingFromJson(Map<String, dynamic> json) => LastRating(
       eventId: json['eventId'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       rating: (json['rating'] as num?)?.toDouble(),
       opponent: json['opponent'] == null
           ? null
@@ -19,7 +20,8 @@ LastRating _$LastRatingFromJson(Map<String, dynamic> json) => LastRating(
 Map<String, dynamic> _$LastRatingToJson(LastRating instance) =>
     <String, dynamic>{
       'eventId': instance.eventId,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'rating': instance.rating,
       'opponent': instance.opponent,
       'isHome': instance.isHome,

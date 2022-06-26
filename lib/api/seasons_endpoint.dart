@@ -10,7 +10,6 @@ import 'package:os_sports_client/models/seasons/season_team_week/season_team_wee
 import 'package:os_sports_client/models/seasons/season/season.dart';
 import 'package:os_sports_client/models/seasons/season_team_week_rounds/season_team_week_round.dart';
 import 'package:os_sports_client/models/seasons/season_teams_statistics/season_teams_statistics.dart';
-import 'package:os_sports_client/models/shared/shared.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'seasons_endpoint.g.dart';

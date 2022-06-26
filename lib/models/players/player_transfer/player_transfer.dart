@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'transfer_fee_raw.dart';
 import 'transfer_from.dart';
@@ -16,7 +17,8 @@ class PlayerTransfer {
   final int? transferFee;
   final String? transferFeeDescription;
   final int? id;
-  final int? transferDateTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? transferDateTimestamp;
   final TransferFeeRaw? transferFeeRaw;
 
   const PlayerTransfer({

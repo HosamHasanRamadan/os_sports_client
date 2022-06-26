@@ -41,7 +41,8 @@ RefereeEvent _$RefereeEventFromJson(Map<String, dynamic> json) => RefereeEvent(
       hasEventPlayerStatistics: json['hasEventPlayerStatistics'] as bool?,
       hasEventPlayerHeatMap: json['hasEventPlayerHeatMap'] as bool?,
       id: json['id'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
       homeRedCards: json['homeRedCards'] as int?,
@@ -68,7 +69,8 @@ Map<String, dynamic> _$RefereeEventToJson(RefereeEvent instance) =>
       'hasEventPlayerStatistics': instance.hasEventPlayerStatistics,
       'hasEventPlayerHeatMap': instance.hasEventPlayerHeatMap,
       'id': instance.id,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
       'homeRedCards': instance.homeRedCards,

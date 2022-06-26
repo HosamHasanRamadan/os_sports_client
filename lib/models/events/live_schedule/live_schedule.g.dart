@@ -43,7 +43,8 @@ LiveSchedule _$LiveScheduleFromJson(Map<String, dynamic> json) => LiveSchedule(
       statusTime: json['statusTime'] == null
           ? null
           : StatusTime.fromJson(json['statusTime'] as Map<String, dynamic>),
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       lastPeriod: json['lastPeriod'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
@@ -68,7 +69,8 @@ Map<String, dynamic> _$LiveScheduleToJson(LiveSchedule instance) =>
       'hasEventPlayerHeatMap': instance.hasEventPlayerHeatMap,
       'id': instance.id,
       'statusTime': instance.statusTime,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'lastPeriod': instance.lastPeriod,
       'finalResultOnly': instance.finalResultOnly,

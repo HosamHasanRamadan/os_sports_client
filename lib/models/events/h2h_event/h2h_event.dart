@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'package:os_sports_client/models/shared/changes.dart';
 
@@ -32,7 +33,8 @@ class H2HEvent {
   final bool? hasEventPlayerHeatMap;
   final int? id;
   final int? previousLegEventId;
-  final int? startTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startTimestamp;
   final String? slug;
   final bool? finalResultOnly;
 

@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'participant.dart';
 
@@ -17,7 +18,8 @@ class Block {
   final bool? hasNextRoundLink;
   final int? id;
   final List<int>? events;
-  final int? seriesStartDateTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? seriesStartDateTimestamp;
   final bool? automaticProgression;
 
   const Block({

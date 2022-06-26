@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'event_media.g.dart';
 
@@ -11,7 +12,8 @@ class EventMedia {
   final List<String>? forCountries;
   final bool? doFollow;
   final int? id;
-  final int? createdAtTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? createdAtTimestamp;
   final Uri? sourceUrl;
 
   const EventMedia({

@@ -37,7 +37,8 @@ NextEvent _$NextEventFromJson(Map<String, dynamic> json) => NextEvent(
           : Changes.fromJson(json['changes'] as Map<String, dynamic>),
       hasGlobalHighlights: json['hasGlobalHighlights'] as bool?,
       id: json['id'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
     );
@@ -55,7 +56,8 @@ Map<String, dynamic> _$NextEventToJson(NextEvent instance) => <String, dynamic>{
       'changes': instance.changes,
       'hasGlobalHighlights': instance.hasGlobalHighlights,
       'id': instance.id,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
     };

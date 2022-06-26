@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'time.g.dart';
 
@@ -6,7 +7,8 @@ part 'time.g.dart';
 class Time {
   final int? injuryTime1;
   final int? injuryTime2;
-  final int? currentPeriodStartTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? currentPeriodStartTimestamp;
 
   const Time({
     this.injuryTime1,

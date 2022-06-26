@@ -20,7 +20,8 @@ Block _$BlockFromJson(Map<String, dynamic> json) => Block(
       hasNextRoundLink: json['hasNextRoundLink'] as bool?,
       id: json['id'] as int?,
       events: (json['events'] as List<dynamic>?)?.map((e) => e as int).toList(),
-      seriesStartDateTimestamp: json['seriesStartDateTimestamp'] as int?,
+      seriesStartDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['seriesStartDateTimestamp'] as int?),
       automaticProgression: json['automaticProgression'] as bool?,
     );
 
@@ -36,6 +37,7 @@ Map<String, dynamic> _$BlockToJson(Block instance) => <String, dynamic>{
       'hasNextRoundLink': instance.hasNextRoundLink,
       'id': instance.id,
       'events': instance.events,
-      'seriesStartDateTimestamp': instance.seriesStartDateTimestamp,
+      'seriesStartDateTimestamp': const TimestampEpochConverter()
+          .toJson(instance.seriesStartDateTimestamp),
       'automaticProgression': instance.automaticProgression,
     };

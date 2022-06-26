@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'performance.dart';
 import 'team.dart';
@@ -9,8 +10,10 @@ part 'manager_history.g.dart';
 class ManagerHistory {
   final Team? team;
   final Performance? performance;
-  final int? startTimestamp;
-  final int? endTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? endTimestamp;
 
   const ManagerHistory({
     this.team,

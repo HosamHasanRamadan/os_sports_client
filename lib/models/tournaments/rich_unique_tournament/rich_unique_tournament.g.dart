@@ -40,8 +40,10 @@ RichUniqueTournament _$RichUniqueTournamentFromJson(
           .toList(),
       hasPositionGraph: json['hasPositionGraph'] as bool?,
       id: json['id'] as int?,
-      startDateTimestamp: json['startDateTimestamp'] as int?,
-      endDateTimestamp: json['endDateTimestamp'] as int?,
+      startDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startDateTimestamp'] as int?),
+      endDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['endDateTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$RichUniqueTournamentToJson(
@@ -67,6 +69,8 @@ Map<String, dynamic> _$RichUniqueTournamentToJson(
       'lowerDivisions': instance.lowerDivisions,
       'hasPositionGraph': instance.hasPositionGraph,
       'id': instance.id,
-      'startDateTimestamp': instance.startDateTimestamp,
-      'endDateTimestamp': instance.endDateTimestamp,
+      'startDateTimestamp':
+          const TimestampEpochConverter().toJson(instance.startDateTimestamp),
+      'endDateTimestamp':
+          const TimestampEpochConverter().toJson(instance.endDateTimestamp),
     };

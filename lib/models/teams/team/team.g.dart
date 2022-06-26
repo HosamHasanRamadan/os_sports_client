@@ -44,7 +44,8 @@ Team _$TeamFromJson(Map<String, dynamic> json) => Team(
       teamColors: json['teamColors'] == null
           ? null
           : TeamColors.fromJson(json['teamColors'] as Map<String, dynamic>),
-      foundationDateTimestamp: json['foundationDateTimestamp'] as int?,
+      foundationDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['foundationDateTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$TeamToJson(Team instance) => <String, dynamic>{
@@ -68,5 +69,6 @@ Map<String, dynamic> _$TeamToJson(Team instance) => <String, dynamic>{
       'country': instance.country,
       'fullName': instance.fullName,
       'teamColors': instance.teamColors,
-      'foundationDateTimestamp': instance.foundationDateTimestamp,
+      'foundationDateTimestamp': const TimestampEpochConverter()
+          .toJson(instance.foundationDateTimestamp),
     };

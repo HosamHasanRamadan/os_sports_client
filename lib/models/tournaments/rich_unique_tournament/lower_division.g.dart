@@ -23,8 +23,10 @@ LowerDivision _$LowerDivisionFromJson(Map<String, dynamic> json) =>
       hasPlayoffSeries: json['hasPlayoffSeries'] as bool?,
       hasPositionGraph: json['hasPositionGraph'] as bool?,
       id: json['id'] as int?,
-      startDateTimestamp: json['startDateTimestamp'] as int?,
-      endDateTimestamp: json['endDateTimestamp'] as int?,
+      startDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startDateTimestamp'] as int?),
+      endDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['endDateTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$LowerDivisionToJson(LowerDivision instance) =>
@@ -40,6 +42,8 @@ Map<String, dynamic> _$LowerDivisionToJson(LowerDivision instance) =>
       'hasPlayoffSeries': instance.hasPlayoffSeries,
       'hasPositionGraph': instance.hasPositionGraph,
       'id': instance.id,
-      'startDateTimestamp': instance.startDateTimestamp,
-      'endDateTimestamp': instance.endDateTimestamp,
+      'startDateTimestamp':
+          const TimestampEpochConverter().toJson(instance.startDateTimestamp),
+      'endDateTimestamp':
+          const TimestampEpochConverter().toJson(instance.endDateTimestamp),
     };

@@ -22,7 +22,8 @@ SeasonStanding _$SeasonStandingFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Row.fromJson(e as Map<String, dynamic>))
           .toList(),
       id: json['id'] as int?,
-      updatedAtTimestamp: json['updatedAtTimestamp'] as int?,
+      updatedAtTimestamp: const TimestampEpochConverter()
+          .fromJson(json['updatedAtTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$SeasonStandingToJson(SeasonStanding instance) =>
@@ -34,5 +35,6 @@ Map<String, dynamic> _$SeasonStandingToJson(SeasonStanding instance) =>
       'tieBreakingRule': instance.tieBreakingRule,
       'rows': instance.rows,
       'id': instance.id,
-      'updatedAtTimestamp': instance.updatedAtTimestamp,
+      'updatedAtTimestamp':
+          const TimestampEpochConverter().toJson(instance.updatedAtTimestamp),
     };

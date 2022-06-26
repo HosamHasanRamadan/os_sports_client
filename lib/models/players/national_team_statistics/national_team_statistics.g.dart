@@ -14,7 +14,8 @@ NationalTeamStatistics _$NationalTeamStatisticsFromJson(
           : Team.fromJson(json['team'] as Map<String, dynamic>),
       appearances: json['appearances'] as int?,
       goals: json['goals'] as int?,
-      debutTimestamp: json['debutTimestamp'] as int?,
+      debutTimestamp: const TimestampEpochConverter()
+          .fromJson(json['debutTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$NationalTeamStatisticsToJson(
@@ -23,5 +24,6 @@ Map<String, dynamic> _$NationalTeamStatisticsToJson(
       'team': instance.team,
       'appearances': instance.appearances,
       'goals': instance.goals,
-      'debutTimestamp': instance.debutTimestamp,
+      'debutTimestamp':
+          const TimestampEpochConverter().toJson(instance.debutTimestamp),
     };

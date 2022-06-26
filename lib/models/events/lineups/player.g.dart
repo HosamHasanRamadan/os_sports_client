@@ -19,7 +19,8 @@ Player _$PlayerFromJson(Map<String, dynamic> json) => Player(
           ? null
           : Country.fromJson(json['country'] as Map<String, dynamic>),
       marketValueCurrency: json['marketValueCurrency'] as String?,
-      dateOfBirthTimestamp: json['dateOfBirthTimestamp'] as int?,
+      dateOfBirthTimestamp: const TimestampEpochConverter()
+          .fromJson(json['dateOfBirthTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$PlayerToJson(Player instance) => <String, dynamic>{
@@ -33,5 +34,6 @@ Map<String, dynamic> _$PlayerToJson(Player instance) => <String, dynamic>{
       'id': instance.id,
       'country': instance.country,
       'marketValueCurrency': instance.marketValueCurrency,
-      'dateOfBirthTimestamp': instance.dateOfBirthTimestamp,
+      'dateOfBirthTimestamp':
+          const TimestampEpochConverter().toJson(instance.dateOfBirthTimestamp),
     };

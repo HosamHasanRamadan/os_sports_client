@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'status_time.g.dart';
 
@@ -7,7 +8,8 @@ class StatusTime {
   final String? prefix;
   final int? initial;
   final int? max;
-  final int? timestamp;
+  @TimestampEpochConverter()
+  final DateTime? timestamp;
   final int? extra;
 
   const StatusTime({

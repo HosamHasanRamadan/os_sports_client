@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'score.dart';
 import 'team.dart';
@@ -31,7 +32,8 @@ class Event {
   final bool? hasEventPlayerHeatMap;
   final int? id;
   final int? awayRedCards;
-  final int? startTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startTimestamp;
   final String? slug;
   final bool? finalResultOnly;
   final int? homeRedCards;

@@ -11,7 +11,8 @@ SeasonTeamWeekRound _$SeasonTeamWeekRoundFromJson(Map<String, dynamic> json) =>
       roundName: json['roundName'] as String?,
       roundSlug: json['roundSlug'] as String?,
       id: json['id'] as int?,
-      createdAtTimestamp: json['createdAtTimestamp'] as int?,
+      createdAtTimestamp: const TimestampEpochConverter()
+          .fromJson(json['createdAtTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$SeasonTeamWeekRoundToJson(
@@ -20,5 +21,6 @@ Map<String, dynamic> _$SeasonTeamWeekRoundToJson(
       'roundName': instance.roundName,
       'roundSlug': instance.roundSlug,
       'id': instance.id,
-      'createdAtTimestamp': instance.createdAtTimestamp,
+      'createdAtTimestamp':
+          const TimestampEpochConverter().toJson(instance.createdAtTimestamp),
     };

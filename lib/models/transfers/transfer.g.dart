@@ -19,7 +19,8 @@ Transfer _$TransferFromJson(Map<String, dynamic> json) => Transfer(
       transferFee: json['transferFee'] as int?,
       transferFeeDescription: json['transferFeeDescription'] as String?,
       id: json['id'] as int?,
-      transferDateTimestamp: json['transferDateTimestamp'] as int?,
+      transferDateTimestamp: const TimestampEpochConverter()
+          .fromJson(json['transferDateTimestamp'] as int?),
       transferFeeRaw: json['transferFeeRaw'] == null
           ? null
           : TransferFeeRaw.fromJson(
@@ -38,7 +39,8 @@ Map<String, dynamic> _$TransferToJson(Transfer instance) => <String, dynamic>{
       'transferFee': instance.transferFee,
       'transferFeeDescription': instance.transferFeeDescription,
       'id': instance.id,
-      'transferDateTimestamp': instance.transferDateTimestamp,
+      'transferDateTimestamp': const TimestampEpochConverter()
+          .toJson(instance.transferDateTimestamp),
       'transferFeeRaw': instance.transferFeeRaw,
       'transferTo': instance.transferTo,
     };

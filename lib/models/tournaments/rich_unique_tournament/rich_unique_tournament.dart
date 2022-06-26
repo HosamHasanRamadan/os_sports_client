@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'package:os_sports_client/models/shared/category.dart';
 
@@ -31,8 +32,10 @@ class RichUniqueTournament {
   final List<LowerDivision>? lowerDivisions;
   final bool? hasPositionGraph;
   final int? id;
-  final int? startDateTimestamp;
-  final int? endDateTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? startDateTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? endDateTimestamp;
 
   const RichUniqueTournament({
     this.name,

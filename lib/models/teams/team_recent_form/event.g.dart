@@ -41,7 +41,8 @@ Event _$EventFromJson(Map<String, dynamic> json) => Event(
       hasEventPlayerStatistics: json['hasEventPlayerStatistics'] as bool?,
       hasEventPlayerHeatMap: json['hasEventPlayerHeatMap'] as bool?,
       id: json['id'] as int?,
-      startTimestamp: json['startTimestamp'] as int?,
+      startTimestamp: const TimestampEpochConverter()
+          .fromJson(json['startTimestamp'] as int?),
       slug: json['slug'] as String?,
       finalResultOnly: json['finalResultOnly'] as bool?,
       aggregatedWinnerCode: json['aggregatedWinnerCode'] as int?,
@@ -66,7 +67,8 @@ Map<String, dynamic> _$EventToJson(Event instance) => <String, dynamic>{
       'hasEventPlayerStatistics': instance.hasEventPlayerStatistics,
       'hasEventPlayerHeatMap': instance.hasEventPlayerHeatMap,
       'id': instance.id,
-      'startTimestamp': instance.startTimestamp,
+      'startTimestamp':
+          const TimestampEpochConverter().toJson(instance.startTimestamp),
       'slug': instance.slug,
       'finalResultOnly': instance.finalResultOnly,
       'aggregatedWinnerCode': instance.aggregatedWinnerCode,

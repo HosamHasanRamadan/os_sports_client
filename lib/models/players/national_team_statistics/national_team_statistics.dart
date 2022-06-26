@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 import 'team.dart';
 
@@ -9,7 +10,8 @@ class NationalTeamStatistics {
   final Team? team;
   final int? appearances;
   final int? goals;
-  final int? debutTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? debutTimestamp;
 
   const NationalTeamStatistics({
     this.team,

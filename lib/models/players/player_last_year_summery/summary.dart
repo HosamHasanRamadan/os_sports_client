@@ -1,11 +1,13 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'summary.g.dart';
 
 @JsonSerializable()
 class Summary {
   final String? type;
-  final int? timestamp;
+  @TimestampEpochConverter()
+  final DateTime? timestamp;
   final String? value;
   final int? uniqueTournamentId;
 

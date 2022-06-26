@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:os_sports_client/converters/converter.dart';
 
 part 'player.g.dart';
 
@@ -13,7 +14,8 @@ class Player {
   final int? userCount;
   final int? id;
   final String? marketValueCurrency;
-  final int? dateOfBirthTimestamp;
+  @TimestampEpochConverter()
+  final DateTime? dateOfBirthTimestamp;
 
   const Player({
     this.name,

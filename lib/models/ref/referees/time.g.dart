@@ -8,10 +8,12 @@ part of 'time.dart';
 
 Time _$TimeFromJson(Map<String, dynamic> json) => Time(
       injuryTime2: json['injuryTime2'] as int?,
-      currentPeriodStartTimestamp: json['currentPeriodStartTimestamp'] as int?,
+      currentPeriodStartTimestamp: const TimestampEpochConverter()
+          .fromJson(json['currentPeriodStartTimestamp'] as int?),
     );
 
 Map<String, dynamic> _$TimeToJson(Time instance) => <String, dynamic>{
       'injuryTime2': instance.injuryTime2,
-      'currentPeriodStartTimestamp': instance.currentPeriodStartTimestamp,
+      'currentPeriodStartTimestamp': const TimestampEpochConverter()
+          .toJson(instance.currentPeriodStartTimestamp),
     };
