@@ -5,7 +5,7 @@ import 'package:os_sports_client/models/shared/score.dart';
 import 'team.dart';
 import 'package:os_sports_client/models/shared/changes.dart';
 
-import 'round_info.dart';
+import 'package:os_sports_client/models/shared/round_info.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
 import 'status_time.dart';

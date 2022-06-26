@@ -6,7 +6,7 @@ import 'team.dart';
 import 'package:os_sports_client/models/shared/changes.dart';
 
 import 'referee.dart';
-import 'round_info.dart';
+import 'package:os_sports_client/models/shared/round_info.dart';
 import 'season.dart';
 import 'package:os_sports_client/models/shared/status.dart';
 
