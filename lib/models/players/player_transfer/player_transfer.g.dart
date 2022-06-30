@@ -10,10 +10,10 @@ PlayerTransfer _$PlayerTransferFromJson(Map<String, dynamic> json) =>
     PlayerTransfer(
       transferFrom: json['transferFrom'] == null
           ? null
-          : TransferFrom.fromJson(json['transferFrom'] as Map<String, dynamic>),
+          : Team.fromJson(json['transferFrom'] as Map<String, dynamic>),
       transferTo: json['transferTo'] == null
           ? null
-          : TransferTo.fromJson(json['transferTo'] as Map<String, dynamic>),
+          : Team.fromJson(json['transferTo'] as Map<String, dynamic>),
       fromTeamName: json['fromTeamName'] as String?,
       toTeamName: json['toTeamName'] as String?,
       type: json['type'] as int?,

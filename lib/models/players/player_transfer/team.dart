@@ -4,10 +4,10 @@ import 'package:os_sports_client/models/shared/sport.dart';
 
 import 'package:os_sports_client/models/shared/team_colors.dart';
 
-part 'transfer_to.g.dart';
+part 'team.g.dart';
 
 @JsonSerializable()
-class TransferTo {
+class Team {
   final String? name;
   final String? slug;
   final String? shortName;
@@ -21,7 +21,7 @@ class TransferTo {
   final int? id;
   final TeamColors? teamColors;
 
-  const TransferTo({
+  const Team({
     this.name,
     this.slug,
     this.shortName,
@@ -36,9 +36,9 @@ class TransferTo {
     this.teamColors,
   });
 
-  factory TransferTo.fromJson(Map<String, dynamic> json) {
-    return _$TransferToFromJson(json);
+  factory Team.fromJson(Map<String, dynamic> json) {
+    return _$TeamFromJson(json);
   }
 
-  Map<String, dynamic> toJson() => _$TransferToToJson(this);
+  Map<String, dynamic> toJson() => _$TeamToJson(this);
 }

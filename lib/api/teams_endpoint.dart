@@ -24,8 +24,6 @@ const _basePath = 'teams';
 abstract class TeamsEndpoint {
   factory TeamsEndpoint(Dio dio, {String baseUrl}) = _TeamsEndpoint;
 
-  // {{ _.base_url }}/teams/latest-media
-
   @GET('/$_basePath/latest-media')
   Future<ApiResponse<List<TeamLatestMedia>>> getTeamLatestMedia({
     @Query('team_id') required int teamId,

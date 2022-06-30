@@ -2,15 +2,14 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:os_sports_client/converters/converter.dart';
 
 import 'transfer_fee_raw.dart';
-import 'transfer_from.dart';
-import 'transfer_to.dart';
+import 'team.dart';
 
 part 'player_transfer.g.dart';
 
 @JsonSerializable()
 class PlayerTransfer {
-  final TransferFrom? transferFrom;
-  final TransferTo? transferTo;
+  final Team? transferFrom;
+  final Team? transferTo;
   final String? fromTeamName;
   final String? toTeamName;
   final int? type;
