@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'season.dart';
-import 'package:os_sports_client/models/shared/tournament.dart';
+import 'package:os_sports_client/models/shared/all.dart';
 
 part 'team_season_of_standings.g.dart';
 

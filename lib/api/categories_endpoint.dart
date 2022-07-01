@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:os_sports_client/models/api_response.dart';
 import 'package:os_sports_client/models/category/categories_live_events.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:os_sports_client/models/shared/category.dart';
+import 'package:os_sports_client/models/shared/all.dart';
 part 'categories_endpoint.g.dart';
 
 const _basePath = 'categories';

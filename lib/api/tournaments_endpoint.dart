@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:os_sports_client/models/api_response.dart';
 import 'package:os_sports_client/api/typed_query_params.dart';
-import 'package:os_sports_client/models/shared/tournament.dart';
+import 'package:os_sports_client/models/shared/all.dart';
 import 'package:os_sports_client/models/tournaments/featured_event/featured_event.dart';
 import 'package:os_sports_client/models/tournaments/media/media.dart';
 import 'package:os_sports_client/models/tournaments/rich_unique_tournament/rich_unique_tournament.dart';
@@ -10,7 +10,6 @@ import 'package:os_sports_client/models/tournaments/tournament_item/tournament_i
 
 import 'package:os_sports_client/models/tournaments/tournament_seasons/tournament_seasons.dart';
 
-import 'package:os_sports_client/models/shared/unique_tournament.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'tournaments_endpoint.g.dart';

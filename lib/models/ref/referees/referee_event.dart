@@ -1,15 +1,11 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:os_sports_client/converters/converter.dart';
 
-import 'package:os_sports_client/models/shared/score.dart';
+import 'package:os_sports_client/models/shared/all.dart';
 import 'team.dart';
-import 'package:os_sports_client/models/shared/changes.dart';
 
-import 'package:os_sports_client/models/shared/round_info.dart';
-import 'package:os_sports_client/models/shared/status.dart';
 
 import 'time.dart';
-import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'referee_event.g.dart';
 

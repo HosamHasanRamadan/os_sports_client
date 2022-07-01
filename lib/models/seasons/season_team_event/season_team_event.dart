@@ -1,11 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:os_sports_client/converters/converter.dart';
 
-import 'package:os_sports_client/models/shared/score.dart';
+import 'package:os_sports_client/models/shared/all.dart';
 import 'team.dart';
-import 'package:os_sports_client/models/shared/status.dart';
 
-import 'package:os_sports_client/models/shared/tournament.dart';
 
 part 'season_team_event.g.dart';
 
