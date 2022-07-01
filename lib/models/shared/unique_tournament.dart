@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'package:os_sports_client/models/shared/category.dart';
+import 'category.dart';
 
 part 'unique_tournament.g.dart';
 
