@@ -178,6 +178,27 @@ class _EventsEndpoint implements EventsEndpoint {
   }
 
   @override
+  Future<ApiResponse<List<Incident>>> getIncidents({required eventId}) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'event_id': eventId};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiResponse<List<Incident>>>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/events/incidents',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiResponse<List<Incident>>.fromJson(
+      _result.data!,
+      (json) => (json as List<dynamic>)
+          .map<Incident>((i) => Incident.fromJson(i as Map<String, dynamic>))
+          .toList(),
+    );
+    return value;
+  }
+
+  @override
   Future<ApiResponse<EventManagers>> getManagers({required eventId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'event_id': eventId};

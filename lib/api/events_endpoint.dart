@@ -8,6 +8,7 @@ import 'package:os_sports_client/models/events/h2h_event/h2h_event.dart';
 import 'package:os_sports_client/models/events/head_to_head/head_to_head.dart';
 import 'package:os_sports_client/models/events/heat_map/player_point.dart';
 import 'package:os_sports_client/models/events/heat_map/team_heat_map.dart';
+import 'package:os_sports_client/models/events/incidents/incident.dart';
 import 'package:os_sports_client/models/events/lineups/lineups.dart';
 import 'package:os_sports_client/models/events/live_schedule/live_schedule.dart';
 import 'package:os_sports_client/models/events/media/event_media.dart';
@@ -63,6 +64,11 @@ abstract class EventsEndpoint {
 
   @GET('/$_basePath/lineups')
   Future<ApiResponse<Lineups>> getLineups({
+    @Query('event_id') required int eventId,
+  });
+
+  @GET('/$_basePath/incidents')
+  Future<ApiResponse<List<Incident>>> getIncidents({
     @Query('event_id') required int eventId,
   });
 
