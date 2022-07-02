@@ -5,7 +5,6 @@ import 'package:os_sports_client/models/shared/all.dart';
 
 import 'team.dart';
 
-
 part 'event.g.dart';
 
 @JsonSerializable()

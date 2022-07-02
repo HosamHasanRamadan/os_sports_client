@@ -4,7 +4,6 @@ import 'package:os_sports_client/converters/converter.dart';
 import 'package:os_sports_client/models/shared/all.dart';
 import 'team.dart';
 
-
 import 'status_time.dart';
 import 'time.dart';
 

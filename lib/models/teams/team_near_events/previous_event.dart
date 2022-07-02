@@ -4,7 +4,6 @@ import 'package:os_sports_client/converters/converter.dart';
 import 'team.dart';
 import 'package:os_sports_client/models/shared/all.dart';
 
-
 import 'time.dart';
 
 part 'previous_event.g.dart';

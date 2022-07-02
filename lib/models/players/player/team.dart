@@ -4,7 +4,6 @@ import 'package:os_sports_client/models/shared/all.dart';
 
 import 'primary_unique_tournament.dart';
 
-
 part 'team.g.dart';
 
 @JsonSerializable()
