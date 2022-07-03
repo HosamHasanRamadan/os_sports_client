@@ -11,7 +11,7 @@ const _basePath = 'categories';
 abstract class CategoriesEndpoint {
   factory CategoriesEndpoint(Dio dio, {String baseUrl}) = _CategoriesEndpoint;
 
-  @GET('/$_basePath/')
+  @GET('/$_basePath')
   Future<ApiResponse<List<Category>>> getCategories({
     @Query('sport_id') required int sportId,
   });

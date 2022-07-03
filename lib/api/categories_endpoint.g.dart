@@ -24,7 +24,7 @@ class _CategoriesEndpoint implements CategoriesEndpoint {
     final _result = await _dio.fetch<Map<String, dynamic>>(
         _setStreamType<ApiResponse<List<Category>>>(
             Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/categories/',
+                .compose(_dio.options, '/categories',
                     queryParameters: queryParameters, data: _data)
                 .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = ApiResponse<List<Category>>.fromJson(
