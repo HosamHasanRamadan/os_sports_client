@@ -1,17 +1,22 @@
+import 'package:dart_mappable/dart_mappable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
+import 'package:os_sports_client/os_sports_client.mapper.g.dart';
 import 'player.dart';
 
 part 'incident.freezed.dart';
-part 'incident.g.dart';
+// part 'incident.g.dart';
 
 @Freezed(
   copyWith: false,
   equal: false,
+  fromJson: false,
+  toJson: false,
   unionKey: 'incidentType',
   fallbackUnion: 'unknown',
 )
+@MappableClass(discriminatorKey: 'incidentType')
 class Incident with _$Incident {
+  @MappableClass(discriminatorValue: 'substitution')
   const factory Incident.substitution({
     Player? playerIn,
     Player? playerOut,
@@ -19,10 +24,11 @@ class Incident with _$Incident {
     int? time,
     bool? injury,
     bool? isHome,
-    String? incidentClass,
+    SubstitutionIncidentClass? incidentClass,
     String? incidentType,
   }) = Substitution;
 
+  @MappableClass(discriminatorValue: 'card')
   const factory Incident.card({
     Player? player,
     String? playerName,
@@ -30,10 +36,11 @@ class Incident with _$Incident {
     int? id,
     int? time,
     bool? isHome,
-    String? incidentClass,
+    CardIncidentClass? incidentClass,
     String? incidentType,
   }) = Card;
 
+  @MappableClass(discriminatorValue: 'period')
   const factory Incident.period({
     String? text,
     int? homeScore,
@@ -44,6 +51,7 @@ class Incident with _$Incident {
     String? incidentType,
   }) = Period;
 
+  @MappableClass(discriminatorValue: 'goal')
   const factory Incident.goal({
     int? homeScore,
     int? awayScore,
@@ -52,28 +60,30 @@ class Incident with _$Incident {
     int? id,
     int? time,
     bool? isHome,
-    String? incidentClass,
+    GoalIncidentClass? incidentClass,
     String? incidentType,
   }) = Goal;
 
+  @MappableClass(discriminatorValue: 'varDecision')
   const factory Incident.varDecision({
     bool? confirmed,
     Player? player,
     bool? isHome,
     int? id,
     int? time,
-    String? incidentClass,
+    VarDecisionIncidentClass? incidentClass,
     String? incidentType,
   }) = VarDecision;
 
-  // @MappableClass(
-  //   discriminatorValue: MappableClass.useAsDefault,
-  //   hooks: UnknownConverter(),
-  // )
+  @MappableClass(
+    discriminatorValue: MappableClass.useAsDefault,
+    hooks: UnknownConverter(),
+  )
   const factory Incident.unknown(
     Map<String, dynamic> unknownIncident,
   ) = Unknown;
 
+  @MappableClass(discriminatorValue: 'injuryTime')
   const factory Incident.injuryTime({
     int? length,
     int? time,
@@ -81,6 +91,7 @@ class Incident with _$Incident {
     String? incidentType,
   }) = InjuryTime;
 
+  @MappableClass(discriminatorValue: 'inGamePenalty')
   const factory Incident.inGamePenalty({
     int? time,
     Player? player,
@@ -88,9 +99,50 @@ class Incident with _$Incident {
     int? id,
     String? incidentType,
     bool? isHome,
-    String? incidentClass,
+    InGamePenaltyIncidentClass? incidentClass,
   }) = InGamePenalty;
 
-  factory Incident.fromJson(Map<String, dynamic> json) =>
-      _$IncidentFromJson(json);
+  factory Incident.fromJson(Map<String, dynamic> json) => Mapper.fromMap(json);
+}
+
+@JsonEnum()
+enum SubstitutionIncidentClass {
+  injury;
+}
+
+@JsonEnum()
+enum CardIncidentClass {
+  yellow,
+  red,
+  yellowRed;
+}
+
+@JsonEnum()
+enum GoalIncidentClass {
+  regular,
+  penalty,
+  ownGoal;
+}
+
+@JsonEnum()
+enum InGamePenaltyIncidentClass {
+  missed,
+}
+
+@JsonEnum()
+enum VarDecisionIncidentClass {
+  penaltyNotAwarded,
+  cardUpgrade,
+  goalNotAwarded,
+  goalAwarded,
+  penaltyAwarded,
+  redCardGiven,
+}
+
+class UnknownConverter extends MappingHooks {
+  const UnknownConverter();
+  @override
+  beforeDecode(value) {
+    return {'unknownIncident': value['data'] as Map<String, dynamic>};
+  }
 }
