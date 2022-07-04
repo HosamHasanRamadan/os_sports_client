@@ -1,8 +1,11 @@
-import 'package:json_annotation/json_annotation.dart';
+import 'package:dart_mappable/dart_mappable.dart';
+import 'package:os_sports_client/os_sports_client.mapper.g.dart';
+// import 'package:json_annotation/json_annotation.dart';
 
-part 'player.g.dart';
+// part 'player.g.dart';
 
-@JsonSerializable()
+// @JsonSerializable()
+@MappableClass()
 class Player {
   final String? name;
   final String? firstName;
@@ -24,9 +27,11 @@ class Player {
     this.id,
   });
 
-  factory Player.fromJson(Map<String, dynamic> json) {
-    return _$PlayerFromJson(json);
-  }
+  // factory Player.fromJson(Map<String, dynamic> json) {
+  //   return _$PlayerFromJson(json);
+  // }
+  factory Player.fromJson(Map<String, dynamic> json) =>
+      Mapper.fromMap<Player>(json);
 
-  Map<String, dynamic> toJson() => _$PlayerToJson(this);
+  Map<String, dynamic> toJson() => Mapper.toMap(this);
 }
