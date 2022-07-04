@@ -102,7 +102,10 @@ class Incident with _$Incident {
     InGamePenaltyIncidentClass? incidentClass,
   }) = InGamePenalty;
 
-  factory Incident.fromJson(Map<String, dynamic> json) => Mapper.fromMap(json);
+  factory Incident.fromJson(Map<String, dynamic> json) =>
+      Mapper.fromMap<Incident>(json);
+
+  Map<String, dynamic> toJson() => Mapper.toMap(this);
 }
 
 @JsonEnum()
