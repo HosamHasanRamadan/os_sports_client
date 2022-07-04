@@ -20,6 +20,11 @@ var _mappers = <BaseMapper>{
   InGamePenaltyMapper._(),
   PlayerMapper._(),
   // enum mappers
+  SubstitutionIncidentClassMapper._(),
+  CardIncidentClassMapper._(),
+  GoalIncidentClassMapper._(),
+  InGamePenaltyIncidentClassMapper._(),
+  VarDecisionIncidentClassMapper._(),
   // custom mappers
 };
 
@@ -424,7 +429,138 @@ class _PlayerCopyWithImpl<$R> extends BaseCopyWith<Player, $R> implements Player
 
 // === GENERATED ENUM MAPPERS AND EXTENSIONS ===
 
+class SubstitutionIncidentClassMapper extends EnumMapper<SubstitutionIncidentClass> {
+  SubstitutionIncidentClassMapper._();
 
+  @override  SubstitutionIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'injury': return SubstitutionIncidentClass.injury;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(SubstitutionIncidentClass self) {
+    switch (self) {
+      case SubstitutionIncidentClass.injury: return 'injury';
+    }
+  }
+}
+
+extension SubstitutionIncidentClassMapperExtension on SubstitutionIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
+
+class CardIncidentClassMapper extends EnumMapper<CardIncidentClass> {
+  CardIncidentClassMapper._();
+
+  @override  CardIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'yellow': return CardIncidentClass.yellow;
+      case 'red': return CardIncidentClass.red;
+      case 'yellowRed': return CardIncidentClass.yellowRed;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(CardIncidentClass self) {
+    switch (self) {
+      case CardIncidentClass.yellow: return 'yellow';
+      case CardIncidentClass.red: return 'red';
+      case CardIncidentClass.yellowRed: return 'yellowRed';
+    }
+  }
+}
+
+extension CardIncidentClassMapperExtension on CardIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
+
+class GoalIncidentClassMapper extends EnumMapper<GoalIncidentClass> {
+  GoalIncidentClassMapper._();
+
+  @override  GoalIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'regular': return GoalIncidentClass.regular;
+      case 'penalty': return GoalIncidentClass.penalty;
+      case 'ownGoal': return GoalIncidentClass.ownGoal;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(GoalIncidentClass self) {
+    switch (self) {
+      case GoalIncidentClass.regular: return 'regular';
+      case GoalIncidentClass.penalty: return 'penalty';
+      case GoalIncidentClass.ownGoal: return 'ownGoal';
+    }
+  }
+}
+
+extension GoalIncidentClassMapperExtension on GoalIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
+
+class InGamePenaltyIncidentClassMapper extends EnumMapper<InGamePenaltyIncidentClass> {
+  InGamePenaltyIncidentClassMapper._();
+
+  @override  InGamePenaltyIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'missed': return InGamePenaltyIncidentClass.missed;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(InGamePenaltyIncidentClass self) {
+    switch (self) {
+      case InGamePenaltyIncidentClass.missed: return 'missed';
+    }
+  }
+}
+
+extension InGamePenaltyIncidentClassMapperExtension on InGamePenaltyIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
+
+class VarDecisionIncidentClassMapper extends EnumMapper<VarDecisionIncidentClass> {
+  VarDecisionIncidentClassMapper._();
+
+  @override  VarDecisionIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'penaltyNotAwarded': return VarDecisionIncidentClass.penaltyNotAwarded;
+      case 'cardUpgrade': return VarDecisionIncidentClass.cardUpgrade;
+      case 'goalNotAwarded': return VarDecisionIncidentClass.goalNotAwarded;
+      case 'goalAwarded': return VarDecisionIncidentClass.goalAwarded;
+      case 'penaltyAwarded': return VarDecisionIncidentClass.penaltyAwarded;
+      case 'redCardGiven': return VarDecisionIncidentClass.redCardGiven;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(VarDecisionIncidentClass self) {
+    switch (self) {
+      case VarDecisionIncidentClass.penaltyNotAwarded: return 'penaltyNotAwarded';
+      case VarDecisionIncidentClass.cardUpgrade: return 'cardUpgrade';
+      case VarDecisionIncidentClass.goalNotAwarded: return 'goalNotAwarded';
+      case VarDecisionIncidentClass.goalAwarded: return 'goalAwarded';
+      case VarDecisionIncidentClass.penaltyAwarded: return 'penaltyAwarded';
+      case VarDecisionIncidentClass.redCardGiven: return 'redCardGiven';
+    }
+  }
+}
+
+extension VarDecisionIncidentClassMapperExtension on VarDecisionIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
 
 
 // === GENERATED UTILITY CODE ===

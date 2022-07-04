@@ -110,31 +110,31 @@ extension IncidentX<T extends Incident> on T {
   Map<String, dynamic> toJson() => Mapper.toMap(this);
 }
 
-@JsonEnum()
+@MappableEnum()
 enum SubstitutionIncidentClass {
   injury;
 }
 
-@JsonEnum()
+@MappableEnum()
 enum CardIncidentClass {
   yellow,
   red,
   yellowRed;
 }
 
-@JsonEnum()
+@MappableEnum()
 enum GoalIncidentClass {
   regular,
   penalty,
   ownGoal;
 }
 
-@JsonEnum()
+@MappableEnum()
 enum InGamePenaltyIncidentClass {
   missed,
 }
 
-@JsonEnum()
+@MappableEnum()
 enum VarDecisionIncidentClass {
   penaltyNotAwarded,
   cardUpgrade,
