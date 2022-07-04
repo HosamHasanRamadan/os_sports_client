@@ -28,6 +28,8 @@ Incident _$IncidentFromJson(Map<String, dynamic> json) {
       return VarDecision.fromJson(json);
     case 'injuryTime':
       return InjuryTime.fromJson(json);
+    case 'inGamePenalty':
+      return InGamePenalty.fromJson(json);
 
     default:
       return Unknown.fromJson(json);
@@ -79,6 +81,9 @@ mixin _$Incident {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -124,6 +129,9 @@ mixin _$Incident {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -169,6 +177,9 @@ mixin _$Incident {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -181,6 +192,7 @@ mixin _$Incident {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -192,6 +204,7 @@ mixin _$Incident {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -203,6 +216,7 @@ mixin _$Incident {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -291,6 +305,9 @@ class _$Substitution implements Substitution {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return substitution(playerIn, playerOut, id, time, injury, isHome,
         incidentClass, incidentType);
@@ -340,6 +357,9 @@ class _$Substitution implements Substitution {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return substitution?.call(playerIn, playerOut, id, time, injury, isHome,
         incidentClass, incidentType);
@@ -389,6 +409,9 @@ class _$Substitution implements Substitution {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (substitution != null) {
@@ -408,6 +431,7 @@ class _$Substitution implements Substitution {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return substitution(this);
   }
@@ -422,6 +446,7 @@ class _$Substitution implements Substitution {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return substitution?.call(this);
   }
@@ -436,6 +461,7 @@ class _$Substitution implements Substitution {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (substitution != null) {
@@ -555,6 +581,9 @@ class _$Card implements Card {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return card(player, playerName, reason, id, time, isHome, incidentClass,
         incidentType);
@@ -604,6 +633,9 @@ class _$Card implements Card {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return card?.call(player, playerName, reason, id, time, isHome,
         incidentClass, incidentType);
@@ -653,6 +685,9 @@ class _$Card implements Card {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -672,6 +707,7 @@ class _$Card implements Card {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return card(this);
   }
@@ -686,6 +722,7 @@ class _$Card implements Card {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return card?.call(this);
   }
@@ -700,6 +737,7 @@ class _$Card implements Card {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -816,6 +854,9 @@ class _$Period implements Period {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return period(
         text, homeScore, awayScore, isLive, time, addedTime, incidentType);
@@ -865,6 +906,9 @@ class _$Period implements Period {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return period?.call(
         text, homeScore, awayScore, isLive, time, addedTime, incidentType);
@@ -914,6 +958,9 @@ class _$Period implements Period {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (period != null) {
@@ -933,6 +980,7 @@ class _$Period implements Period {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return period(this);
   }
@@ -947,6 +995,7 @@ class _$Period implements Period {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return period?.call(this);
   }
@@ -961,6 +1010,7 @@ class _$Period implements Period {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (period != null) {
@@ -1080,6 +1130,9 @@ class _$Goal implements Goal {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return goal(homeScore, awayScore, player, assist1, id, time, isHome,
         incidentClass, incidentType);
@@ -1129,6 +1182,9 @@ class _$Goal implements Goal {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return goal?.call(homeScore, awayScore, player, assist1, id, time, isHome,
         incidentClass, incidentType);
@@ -1178,6 +1234,9 @@ class _$Goal implements Goal {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (goal != null) {
@@ -1197,6 +1256,7 @@ class _$Goal implements Goal {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return goal(this);
   }
@@ -1211,6 +1271,7 @@ class _$Goal implements Goal {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return goal?.call(this);
   }
@@ -1225,6 +1286,7 @@ class _$Goal implements Goal {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (goal != null) {
@@ -1343,6 +1405,9 @@ class _$VarDecision implements VarDecision {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return varDecision(
         confirmed, player, isHome, id, time, incidentClass, incidentType);
@@ -1392,6 +1457,9 @@ class _$VarDecision implements VarDecision {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return varDecision?.call(
         confirmed, player, isHome, id, time, incidentClass, incidentType);
@@ -1441,6 +1509,9 @@ class _$VarDecision implements VarDecision {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (varDecision != null) {
@@ -1460,6 +1531,7 @@ class _$VarDecision implements VarDecision {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return varDecision(this);
   }
@@ -1474,6 +1546,7 @@ class _$VarDecision implements VarDecision {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return varDecision?.call(this);
   }
@@ -1488,6 +1561,7 @@ class _$VarDecision implements VarDecision {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (varDecision != null) {
@@ -1594,6 +1668,9 @@ class _$Unknown implements Unknown {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return unknown(unknownIncident);
   }
@@ -1642,6 +1719,9 @@ class _$Unknown implements Unknown {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return unknown?.call(unknownIncident);
   }
@@ -1690,6 +1770,9 @@ class _$Unknown implements Unknown {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -1708,6 +1791,7 @@ class _$Unknown implements Unknown {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return unknown(this);
   }
@@ -1722,6 +1806,7 @@ class _$Unknown implements Unknown {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return unknown?.call(this);
   }
@@ -1736,6 +1821,7 @@ class _$Unknown implements Unknown {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (unknown != null) {
@@ -1826,6 +1912,9 @@ class _$InjuryTime implements InjuryTime {
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
   }) {
     return injuryTime(length, time, addedTime, incidentType);
   }
@@ -1874,6 +1963,9 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
   }) {
     return injuryTime?.call(length, time, addedTime, incidentType);
   }
@@ -1922,6 +2014,9 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
     required TResult orElse(),
   }) {
     if (injuryTime != null) {
@@ -1940,6 +2035,7 @@ class _$InjuryTime implements InjuryTime {
     required TResult Function(VarDecision value) varDecision,
     required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
   }) {
     return injuryTime(this);
   }
@@ -1954,6 +2050,7 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
   }) {
     return injuryTime?.call(this);
   }
@@ -1968,6 +2065,7 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(VarDecision value)? varDecision,
     TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
     required TResult orElse(),
   }) {
     if (injuryTime != null) {
@@ -1996,4 +2094,276 @@ abstract class InjuryTime implements Incident {
   int? get time => throw _privateConstructorUsedError;
   int? get addedTime => throw _privateConstructorUsedError;
   String? get incidentType => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$InGamePenalty implements InGamePenalty {
+  const _$InGamePenalty(
+      {this.time,
+      this.player,
+      this.description,
+      this.id,
+      this.incidentType,
+      this.isHome,
+      this.incidentClass});
+
+  factory _$InGamePenalty.fromJson(Map<String, dynamic> json) =>
+      _$$InGamePenaltyFromJson(json);
+
+  @override
+  final int? time;
+  @override
+  final Player? player;
+  @override
+  final String? description;
+  @override
+  final int? id;
+  @override
+  final String? incidentType;
+  @override
+  final bool? isHome;
+  @override
+  final String? incidentClass;
+
+  @override
+  String toString() {
+    return 'Incident.inGamePenalty(time: $time, player: $player, description: $description, id: $id, incidentType: $incidentType, isHome: $isHome, incidentClass: $incidentClass)';
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)
+        substitution,
+    required TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)
+        card,
+    required TResult Function(String? text, int? homeScore, int? awayScore,
+            bool? isLive, int? time, int? addedTime, String? incidentType)
+        period,
+    required TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)
+        goal,
+    required TResult Function(bool? confirmed, Player? player, bool? isHome,
+            int? id, int? time, String? incidentClass, String? incidentType)
+        varDecision,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
+    required TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)
+        injuryTime,
+    required TResult Function(int? time, Player? player, String? description,
+            int? id, String? incidentType, bool? isHome, String? incidentClass)
+        inGamePenalty,
+  }) {
+    return inGamePenalty(
+        time, player, description, id, incidentType, isHome, incidentClass);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(bool? confirmed, Player? player, bool? isHome, int? id,
+            int? time, String? incidentClass, String? incidentType)?
+        varDecision,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
+  }) {
+    return inGamePenalty?.call(
+        time, player, description, id, incidentType, isHome, incidentClass);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            String? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(bool? confirmed, Player? player, bool? isHome, int? id,
+            int? time, String? incidentClass, String? incidentType)?
+        varDecision,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(int? time, Player? player, String? description, int? id,
+            String? incidentType, bool? isHome, String? incidentClass)?
+        inGamePenalty,
+    required TResult orElse(),
+  }) {
+    if (inGamePenalty != null) {
+      return inGamePenalty(
+          time, player, description, id, incidentType, isHome, incidentClass);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Substitution value) substitution,
+    required TResult Function(Card value) card,
+    required TResult Function(Period value) period,
+    required TResult Function(Goal value) goal,
+    required TResult Function(VarDecision value) varDecision,
+    required TResult Function(Unknown value) unknown,
+    required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(InGamePenalty value) inGamePenalty,
+  }) {
+    return inGamePenalty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(Unknown value)? unknown,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+  }) {
+    return inGamePenalty?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(Unknown value)? unknown,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+    required TResult orElse(),
+  }) {
+    if (inGamePenalty != null) {
+      return inGamePenalty(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$InGamePenaltyToJson(this);
+  }
+}
+
+abstract class InGamePenalty implements Incident {
+  const factory InGamePenalty(
+      {final int? time,
+      final Player? player,
+      final String? description,
+      final int? id,
+      final String? incidentType,
+      final bool? isHome,
+      final String? incidentClass}) = _$InGamePenalty;
+
+  factory InGamePenalty.fromJson(Map<String, dynamic> json) =
+      _$InGamePenalty.fromJson;
+
+  int? get time => throw _privateConstructorUsedError;
+  Player? get player => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get incidentType => throw _privateConstructorUsedError;
+  bool? get isHome => throw _privateConstructorUsedError;
+  String? get incidentClass => throw _privateConstructorUsedError;
 }

@@ -154,3 +154,27 @@ Map<String, dynamic> _$$InjuryTimeToJson(_$InjuryTime instance) =>
       'addedTime': instance.addedTime,
       'incidentType': instance.incidentType,
     };
+
+_$InGamePenalty _$$InGamePenaltyFromJson(Map<String, dynamic> json) =>
+    _$InGamePenalty(
+      time: json['time'] as int?,
+      player: json['player'] == null
+          ? null
+          : Player.fromJson(json['player'] as Map<String, dynamic>),
+      description: json['description'] as String?,
+      id: json['id'] as int?,
+      incidentType: json['incidentType'] as String?,
+      isHome: json['isHome'] as bool?,
+      incidentClass: json['incidentClass'] as String?,
+    );
+
+Map<String, dynamic> _$$InGamePenaltyToJson(_$InGamePenalty instance) =>
+    <String, dynamic>{
+      'time': instance.time,
+      'player': instance.player,
+      'description': instance.description,
+      'id': instance.id,
+      'incidentType': instance.incidentType,
+      'isHome': instance.isHome,
+      'incidentClass': instance.incidentClass,
+    };

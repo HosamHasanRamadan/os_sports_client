@@ -81,6 +81,16 @@ class Incident with _$Incident {
     String? incidentType,
   }) = InjuryTime;
 
+  const factory Incident.inGamePenalty({
+    int? time,
+    Player? player,
+    String? description,
+    int? id,
+    String? incidentType,
+    bool? isHome,
+    String? incidentClass,
+  }) = InGamePenalty;
+
   factory Incident.fromJson(Map<String, dynamic> json) =>
       _$IncidentFromJson(json);
 }
