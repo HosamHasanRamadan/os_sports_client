@@ -11,8 +11,8 @@ part 'incident.freezed.dart';
   equal: false,
   fromJson: false,
   toJson: false,
-  unionKey: 'incidentType',
-  fallbackUnion: 'unknown',
+  // unionKey: 'incidentType',
+  // fallbackUnion: 'unknown',
 )
 @MappableClass(discriminatorKey: 'incidentType')
 class Incident with _$Incident {
@@ -104,7 +104,9 @@ class Incident with _$Incident {
 
   factory Incident.fromJson(Map<String, dynamic> json) =>
       Mapper.fromMap<Incident>(json);
+}
 
+extension IncidentX<T extends Incident> on T {
   Map<String, dynamic> toJson() => Mapper.toMap(this);
 }
 
