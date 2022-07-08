@@ -145,6 +145,7 @@ enum GoalIncidentClass {
 @MappableEnum()
 enum InGamePenaltyIncidentClass {
   missed,
+  scored;
 }
 
 @MappableEnum()

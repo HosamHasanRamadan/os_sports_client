@@ -347,7 +347,7 @@ extension PenaltyShootoutMapperExtension  on PenaltyShootout {
 abstract class PenaltyShootoutCopyWith<$R> {
   factory PenaltyShootoutCopyWith(PenaltyShootout value, Then<PenaltyShootout, $R> then) = _PenaltyShootoutCopyWithImpl<$R>;
   PlayerCopyWith<$R>? get player;
-  $R call({Player? player, int? homeScore, int? awayScore, int? sequence, String? description, int? id, String? incidentType, bool? isHome, String? incidentClass});
+  $R call({Player? player, int? homeScore, int? awayScore, int? sequence, String? description, int? id, String? incidentType, bool? isHome, PenaltyShootoutIncidentClass? incidentClass});
   $R apply(PenaltyShootout Function(PenaltyShootout) transform);
 }
 
@@ -554,6 +554,7 @@ class InGamePenaltyIncidentClassMapper extends EnumMapper<InGamePenaltyIncidentC
   @override  InGamePenaltyIncidentClass decode(dynamic value) {
     switch (value) {
       case 'missed': return InGamePenaltyIncidentClass.missed;
+      case 'scored': return InGamePenaltyIncidentClass.scored;
       default: throw MapperException.unknownEnumValue(value);
     }
   }
@@ -561,6 +562,7 @@ class InGamePenaltyIncidentClassMapper extends EnumMapper<InGamePenaltyIncidentC
   @override  dynamic encode(InGamePenaltyIncidentClass self) {
     switch (self) {
       case InGamePenaltyIncidentClass.missed: return 'missed';
+      case InGamePenaltyIncidentClass.scored: return 'scored';
     }
   }
 }
