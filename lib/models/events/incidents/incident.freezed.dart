@@ -490,14 +490,14 @@ abstract class Substitution implements Incident {
   factory Substitution.fromJson(Map<String, dynamic> json) =
       _$Substitution.fromJson;
 
-  Player? get playerIn => throw _privateConstructorUsedError;
-  Player? get playerOut => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  bool? get injury => throw _privateConstructorUsedError;
-  bool? get isHome => throw _privateConstructorUsedError;
-  String? get incidentClass => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  Player? get playerIn;
+  Player? get playerOut;
+  int? get id;
+  int? get time;
+  bool? get injury;
+  bool? get isHome;
+  String? get incidentClass;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -765,14 +765,14 @@ abstract class Card implements Incident {
 
   factory Card.fromJson(Map<String, dynamic> json) = _$Card.fromJson;
 
-  Player? get player => throw _privateConstructorUsedError;
-  String? get playerName => throw _privateConstructorUsedError;
-  String? get reason => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  bool? get isHome => throw _privateConstructorUsedError;
-  String? get incidentClass => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  Player? get player;
+  String? get playerName;
+  String? get reason;
+  int? get id;
+  int? get time;
+  bool? get isHome;
+  String? get incidentClass;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -1037,13 +1037,13 @@ abstract class Period implements Incident {
 
   factory Period.fromJson(Map<String, dynamic> json) = _$Period.fromJson;
 
-  String? get text => throw _privateConstructorUsedError;
-  int? get homeScore => throw _privateConstructorUsedError;
-  int? get awayScore => throw _privateConstructorUsedError;
-  bool? get isLive => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  int? get addedTime => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  String? get text;
+  int? get homeScore;
+  int? get awayScore;
+  bool? get isLive;
+  int? get time;
+  int? get addedTime;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -1315,15 +1315,15 @@ abstract class Goal implements Incident {
 
   factory Goal.fromJson(Map<String, dynamic> json) = _$Goal.fromJson;
 
-  int? get homeScore => throw _privateConstructorUsedError;
-  int? get awayScore => throw _privateConstructorUsedError;
-  Player? get player => throw _privateConstructorUsedError;
-  Player? get assist1 => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  bool? get isHome => throw _privateConstructorUsedError;
-  String? get incidentClass => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  int? get homeScore;
+  int? get awayScore;
+  Player? get player;
+  Player? get assist1;
+  int? get id;
+  int? get time;
+  bool? get isHome;
+  String? get incidentClass;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -1589,13 +1589,13 @@ abstract class VarDecision implements Incident {
   factory VarDecision.fromJson(Map<String, dynamic> json) =
       _$VarDecision.fromJson;
 
-  bool? get confirmed => throw _privateConstructorUsedError;
-  Player? get player => throw _privateConstructorUsedError;
-  bool? get isHome => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  String? get incidentClass => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  bool? get confirmed;
+  Player? get player;
+  bool? get isHome;
+  int? get id;
+  int? get time;
+  String? get incidentClass;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -1841,8 +1841,7 @@ abstract class Unknown implements Incident {
 
   factory Unknown.fromJson(Map<String, dynamic> json) = _$Unknown.fromJson;
 
-  Map<String, dynamic> get unknownIncident =>
-      throw _privateConstructorUsedError;
+  Map<String, dynamic> get unknownIncident;
 }
 
 /// @nodoc
@@ -2090,10 +2089,10 @@ abstract class InjuryTime implements Incident {
   factory InjuryTime.fromJson(Map<String, dynamic> json) =
       _$InjuryTime.fromJson;
 
-  int? get length => throw _privateConstructorUsedError;
-  int? get time => throw _privateConstructorUsedError;
-  int? get addedTime => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
+  int? get length;
+  int? get time;
+  int? get addedTime;
+  String? get incidentType;
 }
 
 /// @nodoc
@@ -2359,11 +2358,11 @@ abstract class InGamePenalty implements Incident {
   factory InGamePenalty.fromJson(Map<String, dynamic> json) =
       _$InGamePenalty.fromJson;
 
-  int? get time => throw _privateConstructorUsedError;
-  Player? get player => throw _privateConstructorUsedError;
-  String? get description => throw _privateConstructorUsedError;
-  int? get id => throw _privateConstructorUsedError;
-  String? get incidentType => throw _privateConstructorUsedError;
-  bool? get isHome => throw _privateConstructorUsedError;
-  String? get incidentClass => throw _privateConstructorUsedError;
+  int? get time;
+  Player? get player;
+  String? get description;
+  int? get id;
+  String? get incidentType;
+  bool? get isHome;
+  String? get incidentClass;
 }
