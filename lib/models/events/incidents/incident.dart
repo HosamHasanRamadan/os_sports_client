@@ -93,7 +93,7 @@ class Incident with _$Incident {
     int? id,
     String? incidentType,
     bool? isHome,
-    PenaltyShootoutIncidentClass? incidentClass,
+    PenaltyIncidentClass? incidentClass,
   }) = PenaltyShootout;
 
   @MappableClass(discriminatorValue: 'inGamePenalty')
@@ -104,7 +104,7 @@ class Incident with _$Incident {
     int? id,
     String? incidentType,
     bool? isHome,
-    InGamePenaltyIncidentClass? incidentClass,
+    PenaltyIncidentClass? incidentClass,
   }) = InGamePenalty;
 
   @MappableClass(
@@ -143,13 +143,7 @@ enum GoalIncidentClass {
 }
 
 @MappableEnum()
-enum InGamePenaltyIncidentClass {
-  missed,
-  scored;
-}
-
-@MappableEnum()
-enum PenaltyShootoutIncidentClass {
+enum PenaltyIncidentClass {
   missed,
   scored;
 }

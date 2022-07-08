@@ -24,8 +24,7 @@ var _mappers = <BaseMapper>{
   SubstitutionIncidentClassMapper._(),
   CardIncidentClassMapper._(),
   GoalIncidentClassMapper._(),
-  InGamePenaltyIncidentClassMapper._(),
-  PenaltyShootoutIncidentClassMapper._(),
+  PenaltyIncidentClassMapper._(),
   VarDecisionIncidentClassMapper._(),
   // custom mappers
 };
@@ -347,7 +346,7 @@ extension PenaltyShootoutMapperExtension  on PenaltyShootout {
 abstract class PenaltyShootoutCopyWith<$R> {
   factory PenaltyShootoutCopyWith(PenaltyShootout value, Then<PenaltyShootout, $R> then) = _PenaltyShootoutCopyWithImpl<$R>;
   PlayerCopyWith<$R>? get player;
-  $R call({Player? player, int? homeScore, int? awayScore, int? sequence, String? description, int? id, String? incidentType, bool? isHome, PenaltyShootoutIncidentClass? incidentClass});
+  $R call({Player? player, int? homeScore, int? awayScore, int? sequence, String? description, int? id, String? incidentType, bool? isHome, PenaltyIncidentClass? incidentClass});
   $R apply(PenaltyShootout Function(PenaltyShootout) transform);
 }
 
@@ -385,7 +384,7 @@ extension InGamePenaltyMapperExtension  on InGamePenalty {
 abstract class InGamePenaltyCopyWith<$R> {
   factory InGamePenaltyCopyWith(InGamePenalty value, Then<InGamePenalty, $R> then) = _InGamePenaltyCopyWithImpl<$R>;
   PlayerCopyWith<$R>? get player;
-  $R call({int? time, Player? player, String? description, int? id, String? incidentType, bool? isHome, InGamePenaltyIncidentClass? incidentClass});
+  $R call({int? time, Player? player, String? description, int? id, String? incidentType, bool? isHome, dynamic incidentClass});
   $R apply(InGamePenalty Function(InGamePenalty) transform);
 }
 
@@ -548,51 +547,26 @@ extension GoalIncidentClassMapperExtension on GoalIncidentClass {
   String toStringValue() => Mapper.toValue(this) as String;
 }
 
-class InGamePenaltyIncidentClassMapper extends EnumMapper<InGamePenaltyIncidentClass> {
-  InGamePenaltyIncidentClassMapper._();
+class PenaltyIncidentClassMapper extends EnumMapper<PenaltyIncidentClass> {
+  PenaltyIncidentClassMapper._();
 
-  @override  InGamePenaltyIncidentClass decode(dynamic value) {
+  @override  PenaltyIncidentClass decode(dynamic value) {
     switch (value) {
-      case 'missed': return InGamePenaltyIncidentClass.missed;
-      case 'scored': return InGamePenaltyIncidentClass.scored;
+      case 'missed': return PenaltyIncidentClass.missed;
+      case 'scored': return PenaltyIncidentClass.scored;
       default: throw MapperException.unknownEnumValue(value);
     }
   }
 
-  @override  dynamic encode(InGamePenaltyIncidentClass self) {
+  @override  dynamic encode(PenaltyIncidentClass self) {
     switch (self) {
-      case InGamePenaltyIncidentClass.missed: return 'missed';
-      case InGamePenaltyIncidentClass.scored: return 'scored';
+      case PenaltyIncidentClass.missed: return 'missed';
+      case PenaltyIncidentClass.scored: return 'scored';
     }
   }
 }
 
-extension InGamePenaltyIncidentClassMapperExtension on InGamePenaltyIncidentClass {
-  dynamic toValue() => Mapper.toValue(this);
-  @Deprecated('Use \'toValue\' instead')
-  String toStringValue() => Mapper.toValue(this) as String;
-}
-
-class PenaltyShootoutIncidentClassMapper extends EnumMapper<PenaltyShootoutIncidentClass> {
-  PenaltyShootoutIncidentClassMapper._();
-
-  @override  PenaltyShootoutIncidentClass decode(dynamic value) {
-    switch (value) {
-      case 'missed': return PenaltyShootoutIncidentClass.missed;
-      case 'scored': return PenaltyShootoutIncidentClass.scored;
-      default: throw MapperException.unknownEnumValue(value);
-    }
-  }
-
-  @override  dynamic encode(PenaltyShootoutIncidentClass self) {
-    switch (self) {
-      case PenaltyShootoutIncidentClass.missed: return 'missed';
-      case PenaltyShootoutIncidentClass.scored: return 'scored';
-    }
-  }
-}
-
-extension PenaltyShootoutIncidentClassMapperExtension on PenaltyShootoutIncidentClass {
+extension PenaltyIncidentClassMapperExtension on PenaltyIncidentClass {
   dynamic toValue() => Mapper.toValue(this);
   @Deprecated('Use \'toValue\' instead')
   String toStringValue() => Mapper.toValue(this) as String;

@@ -73,7 +73,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -82,7 +82,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) =>
@@ -144,7 +144,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -153,7 +153,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) =>
@@ -215,7 +215,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -224,7 +224,7 @@ mixin _$Incident {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -366,7 +366,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -375,7 +375,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -441,7 +441,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -450,7 +450,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -516,7 +516,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -525,7 +525,7 @@ class _$Substitution implements Substitution {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -705,7 +705,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -714,7 +714,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -780,7 +780,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -789,7 +789,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -855,7 +855,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -864,7 +864,7 @@ class _$Card implements Card {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -1041,7 +1041,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -1050,7 +1050,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -1116,7 +1116,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1125,7 +1125,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -1191,7 +1191,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1200,7 +1200,7 @@ class _$Period implements Period {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -1381,7 +1381,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -1390,7 +1390,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -1456,7 +1456,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1465,7 +1465,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -1531,7 +1531,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1540,7 +1540,7 @@ class _$Goal implements Goal {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -1719,7 +1719,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -1728,7 +1728,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -1794,7 +1794,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1803,7 +1803,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -1869,7 +1869,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -1878,7 +1878,7 @@ class _$VarDecision implements VarDecision {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -2041,7 +2041,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -2050,7 +2050,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -2115,7 +2115,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2124,7 +2124,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -2189,7 +2189,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2198,7 +2198,7 @@ class _$InjuryTime implements InjuryTime {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -2307,7 +2307,7 @@ class _$PenaltyShootout implements PenaltyShootout {
   @override
   final bool? isHome;
   @override
-  final PenaltyShootoutIncidentClass? incidentClass;
+  final PenaltyIncidentClass? incidentClass;
 
   @override
   String toString() {
@@ -2372,7 +2372,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -2381,7 +2381,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -2447,7 +2447,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2456,7 +2456,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -2522,7 +2522,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2531,7 +2531,7 @@ class _$PenaltyShootout implements PenaltyShootout {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -2606,7 +2606,7 @@ abstract class PenaltyShootout implements Incident {
       final int? id,
       final String? incidentType,
       final bool? isHome,
-      final PenaltyShootoutIncidentClass? incidentClass}) = _$PenaltyShootout;
+      final PenaltyIncidentClass? incidentClass}) = _$PenaltyShootout;
 
   Player? get player;
   int? get homeScore;
@@ -2616,7 +2616,7 @@ abstract class PenaltyShootout implements Incident {
   int? get id;
   String? get incidentType;
   bool? get isHome;
-  PenaltyShootoutIncidentClass? get incidentClass;
+  PenaltyIncidentClass? get incidentClass;
 }
 
 /// @nodoc
@@ -2645,7 +2645,7 @@ class _$InGamePenalty implements InGamePenalty {
   @override
   final bool? isHome;
   @override
-  final InGamePenaltyIncidentClass? incidentClass;
+  final PenaltyIncidentClass? incidentClass;
 
   @override
   String toString() {
@@ -2710,7 +2710,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -2719,7 +2719,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -2785,7 +2785,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2794,7 +2794,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -2860,7 +2860,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -2869,7 +2869,7 @@ class _$InGamePenalty implements InGamePenalty {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
@@ -2942,7 +2942,7 @@ abstract class InGamePenalty implements Incident {
       final int? id,
       final String? incidentType,
       final bool? isHome,
-      final InGamePenaltyIncidentClass? incidentClass}) = _$InGamePenalty;
+      final PenaltyIncidentClass? incidentClass}) = _$InGamePenalty;
 
   int? get time;
   Player? get player;
@@ -2950,7 +2950,7 @@ abstract class InGamePenalty implements Incident {
   int? get id;
   String? get incidentType;
   bool? get isHome;
-  InGamePenaltyIncidentClass? get incidentClass;
+  PenaltyIncidentClass? get incidentClass;
 }
 
 /// @nodoc
@@ -3031,7 +3031,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         penaltyShootout,
     required TResult Function(
             int? time,
@@ -3040,7 +3040,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
+            PenaltyIncidentClass? incidentClass)
         inGamePenalty,
     required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
@@ -3105,7 +3105,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -3114,7 +3114,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
@@ -3179,7 +3179,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            PenaltyShootoutIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         penaltyShootout,
     TResult Function(
             int? time,
@@ -3188,7 +3188,7 @@ class _$Unknown implements Unknown {
             int? id,
             String? incidentType,
             bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
+            PenaltyIncidentClass? incidentClass)?
         inGamePenalty,
     TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
