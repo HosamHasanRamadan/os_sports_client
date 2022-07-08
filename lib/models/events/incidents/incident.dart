@@ -148,6 +148,6 @@ class UnknownConverter extends MappingHooks {
   const UnknownConverter();
   @override
   beforeDecode(value) {
-    return {'unknownIncident': value['data'] as Map<String, dynamic>};
+    return {'unknownIncident': value as Map<String, dynamic>};
   }
 }
