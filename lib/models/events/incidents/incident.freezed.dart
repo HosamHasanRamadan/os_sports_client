@@ -61,10 +61,20 @@ mixin _$Incident {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -74,6 +84,7 @@ mixin _$Incident {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -121,10 +132,20 @@ mixin _$Incident {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -134,6 +155,7 @@ mixin _$Incident {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -181,10 +203,20 @@ mixin _$Incident {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -194,6 +226,7 @@ mixin _$Incident {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -204,9 +237,10 @@ mixin _$Incident {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -216,9 +250,10 @@ mixin _$Incident {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -228,9 +263,10 @@ mixin _$Incident {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -318,10 +354,20 @@ class _$Substitution implements Substitution {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -331,6 +377,7 @@ class _$Substitution implements Substitution {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return substitution(playerIn, playerOut, id, time, injury, isHome,
         incidentClass, incidentType);
@@ -382,10 +429,20 @@ class _$Substitution implements Substitution {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -395,6 +452,7 @@ class _$Substitution implements Substitution {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return substitution?.call(playerIn, playerOut, id, time, injury, isHome,
         incidentClass, incidentType);
@@ -446,10 +504,20 @@ class _$Substitution implements Substitution {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -459,6 +527,7 @@ class _$Substitution implements Substitution {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (substitution != null) {
@@ -476,9 +545,10 @@ class _$Substitution implements Substitution {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return substitution(this);
   }
@@ -491,9 +561,10 @@ class _$Substitution implements Substitution {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return substitution?.call(this);
   }
@@ -506,9 +577,10 @@ class _$Substitution implements Substitution {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (substitution != null) {
@@ -622,10 +694,20 @@ class _$Card implements Card {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -635,6 +717,7 @@ class _$Card implements Card {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return card(player, playerName, reason, id, time, isHome, incidentClass,
         incidentType);
@@ -686,10 +769,20 @@ class _$Card implements Card {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -699,6 +792,7 @@ class _$Card implements Card {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return card?.call(player, playerName, reason, id, time, isHome,
         incidentClass, incidentType);
@@ -750,10 +844,20 @@ class _$Card implements Card {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -763,6 +867,7 @@ class _$Card implements Card {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -780,9 +885,10 @@ class _$Card implements Card {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return card(this);
   }
@@ -795,9 +901,10 @@ class _$Card implements Card {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return card?.call(this);
   }
@@ -810,9 +917,10 @@ class _$Card implements Card {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (card != null) {
@@ -922,10 +1030,20 @@ class _$Period implements Period {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -935,6 +1053,7 @@ class _$Period implements Period {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return period(
         text, homeScore, awayScore, isLive, time, addedTime, incidentType);
@@ -986,10 +1105,20 @@ class _$Period implements Period {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -999,6 +1128,7 @@ class _$Period implements Period {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return period?.call(
         text, homeScore, awayScore, isLive, time, addedTime, incidentType);
@@ -1050,10 +1180,20 @@ class _$Period implements Period {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -1063,6 +1203,7 @@ class _$Period implements Period {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (period != null) {
@@ -1080,9 +1221,10 @@ class _$Period implements Period {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return period(this);
   }
@@ -1095,9 +1237,10 @@ class _$Period implements Period {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return period?.call(this);
   }
@@ -1110,9 +1253,10 @@ class _$Period implements Period {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (period != null) {
@@ -1226,10 +1370,20 @@ class _$Goal implements Goal {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -1239,6 +1393,7 @@ class _$Goal implements Goal {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return goal(homeScore, awayScore, player, assist1, id, time, isHome,
         incidentClass, incidentType);
@@ -1290,10 +1445,20 @@ class _$Goal implements Goal {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -1303,6 +1468,7 @@ class _$Goal implements Goal {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return goal?.call(homeScore, awayScore, player, assist1, id, time, isHome,
         incidentClass, incidentType);
@@ -1354,10 +1520,20 @@ class _$Goal implements Goal {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -1367,6 +1543,7 @@ class _$Goal implements Goal {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (goal != null) {
@@ -1384,9 +1561,10 @@ class _$Goal implements Goal {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return goal(this);
   }
@@ -1399,9 +1577,10 @@ class _$Goal implements Goal {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return goal?.call(this);
   }
@@ -1414,9 +1593,10 @@ class _$Goal implements Goal {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (goal != null) {
@@ -1528,10 +1708,20 @@ class _$VarDecision implements VarDecision {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -1541,6 +1731,7 @@ class _$VarDecision implements VarDecision {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return varDecision(
         confirmed, player, isHome, id, time, incidentClass, incidentType);
@@ -1592,10 +1783,20 @@ class _$VarDecision implements VarDecision {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -1605,6 +1806,7 @@ class _$VarDecision implements VarDecision {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return varDecision?.call(
         confirmed, player, isHome, id, time, incidentClass, incidentType);
@@ -1656,10 +1858,20 @@ class _$VarDecision implements VarDecision {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -1669,6 +1881,7 @@ class _$VarDecision implements VarDecision {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (varDecision != null) {
@@ -1686,9 +1899,10 @@ class _$VarDecision implements VarDecision {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return varDecision(this);
   }
@@ -1701,9 +1915,10 @@ class _$VarDecision implements VarDecision {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return varDecision?.call(this);
   }
@@ -1716,9 +1931,10 @@ class _$VarDecision implements VarDecision {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (varDecision != null) {
@@ -1746,276 +1962,6 @@ abstract class VarDecision implements Incident {
   VarDecisionIncidentClass? get incidentClass =>
       throw _privateConstructorUsedError;
   String? get incidentType => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-
-@MappableClass(
-    discriminatorValue: MappableClass.useAsDefault, hooks: UnknownConverter())
-class _$Unknown implements Unknown {
-  const _$Unknown(final Map<String, dynamic> unknownIncident)
-      : _unknownIncident = unknownIncident;
-
-  final Map<String, dynamic> _unknownIncident;
-  @override
-  Map<String, dynamic> get unknownIncident {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableMapView(_unknownIncident);
-  }
-
-  @override
-  String toString() {
-    return 'Incident.unknown(unknownIncident: $unknownIncident)';
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Player? playerIn,
-            Player? playerOut,
-            int? id,
-            int? time,
-            bool? injury,
-            bool? isHome,
-            SubstitutionIncidentClass? incidentClass,
-            String? incidentType)
-        substitution,
-    required TResult Function(
-            Player? player,
-            String? playerName,
-            String? reason,
-            int? id,
-            int? time,
-            bool? isHome,
-            CardIncidentClass? incidentClass,
-            String? incidentType)
-        card,
-    required TResult Function(String? text, int? homeScore, int? awayScore,
-            bool? isLive, int? time, int? addedTime, String? incidentType)
-        period,
-    required TResult Function(
-            int? homeScore,
-            int? awayScore,
-            Player? player,
-            Player? assist1,
-            int? id,
-            int? time,
-            bool? isHome,
-            GoalIncidentClass? incidentClass,
-            String? incidentType)
-        goal,
-    required TResult Function(
-            bool? confirmed,
-            Player? player,
-            bool? isHome,
-            int? id,
-            int? time,
-            VarDecisionIncidentClass? incidentClass,
-            String? incidentType)
-        varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
-    required TResult Function(
-            int? length, int? time, int? addedTime, String? incidentType)
-        injuryTime,
-    required TResult Function(
-            int? time,
-            Player? player,
-            String? description,
-            int? id,
-            String? incidentType,
-            bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)
-        inGamePenalty,
-  }) {
-    return unknown(unknownIncident);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(
-            Player? playerIn,
-            Player? playerOut,
-            int? id,
-            int? time,
-            bool? injury,
-            bool? isHome,
-            SubstitutionIncidentClass? incidentClass,
-            String? incidentType)?
-        substitution,
-    TResult Function(
-            Player? player,
-            String? playerName,
-            String? reason,
-            int? id,
-            int? time,
-            bool? isHome,
-            CardIncidentClass? incidentClass,
-            String? incidentType)?
-        card,
-    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
-            int? time, int? addedTime, String? incidentType)?
-        period,
-    TResult Function(
-            int? homeScore,
-            int? awayScore,
-            Player? player,
-            Player? assist1,
-            int? id,
-            int? time,
-            bool? isHome,
-            GoalIncidentClass? incidentClass,
-            String? incidentType)?
-        goal,
-    TResult Function(
-            bool? confirmed,
-            Player? player,
-            bool? isHome,
-            int? id,
-            int? time,
-            VarDecisionIncidentClass? incidentClass,
-            String? incidentType)?
-        varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
-    TResult Function(
-            int? length, int? time, int? addedTime, String? incidentType)?
-        injuryTime,
-    TResult Function(
-            int? time,
-            Player? player,
-            String? description,
-            int? id,
-            String? incidentType,
-            bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
-        inGamePenalty,
-  }) {
-    return unknown?.call(unknownIncident);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            Player? playerIn,
-            Player? playerOut,
-            int? id,
-            int? time,
-            bool? injury,
-            bool? isHome,
-            SubstitutionIncidentClass? incidentClass,
-            String? incidentType)?
-        substitution,
-    TResult Function(
-            Player? player,
-            String? playerName,
-            String? reason,
-            int? id,
-            int? time,
-            bool? isHome,
-            CardIncidentClass? incidentClass,
-            String? incidentType)?
-        card,
-    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
-            int? time, int? addedTime, String? incidentType)?
-        period,
-    TResult Function(
-            int? homeScore,
-            int? awayScore,
-            Player? player,
-            Player? assist1,
-            int? id,
-            int? time,
-            bool? isHome,
-            GoalIncidentClass? incidentClass,
-            String? incidentType)?
-        goal,
-    TResult Function(
-            bool? confirmed,
-            Player? player,
-            bool? isHome,
-            int? id,
-            int? time,
-            VarDecisionIncidentClass? incidentClass,
-            String? incidentType)?
-        varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
-    TResult Function(
-            int? length, int? time, int? addedTime, String? incidentType)?
-        injuryTime,
-    TResult Function(
-            int? time,
-            Player? player,
-            String? description,
-            int? id,
-            String? incidentType,
-            bool? isHome,
-            InGamePenaltyIncidentClass? incidentClass)?
-        inGamePenalty,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(unknownIncident);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(Substitution value) substitution,
-    required TResult Function(Card value) card,
-    required TResult Function(Period value) period,
-    required TResult Function(Goal value) goal,
-    required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
-    required TResult Function(InjuryTime value) injuryTime,
-    required TResult Function(InGamePenalty value) inGamePenalty,
-  }) {
-    return unknown(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(Substitution value)? substitution,
-    TResult Function(Card value)? card,
-    TResult Function(Period value)? period,
-    TResult Function(Goal value)? goal,
-    TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
-    TResult Function(InjuryTime value)? injuryTime,
-    TResult Function(InGamePenalty value)? inGamePenalty,
-  }) {
-    return unknown?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(Substitution value)? substitution,
-    TResult Function(Card value)? card,
-    TResult Function(Period value)? period,
-    TResult Function(Goal value)? goal,
-    TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
-    TResult Function(InjuryTime value)? injuryTime,
-    TResult Function(InGamePenalty value)? inGamePenalty,
-    required TResult orElse(),
-  }) {
-    if (unknown != null) {
-      return unknown(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class Unknown implements Incident {
-  const factory Unknown(final Map<String, dynamic> unknownIncident) = _$Unknown;
-
-  Map<String, dynamic> get unknownIncident =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2085,10 +2031,20 @@ class _$InjuryTime implements InjuryTime {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -2098,6 +2054,7 @@ class _$InjuryTime implements InjuryTime {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return injuryTime(length, time, addedTime, incidentType);
   }
@@ -2148,10 +2105,20 @@ class _$InjuryTime implements InjuryTime {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -2161,6 +2128,7 @@ class _$InjuryTime implements InjuryTime {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return injuryTime?.call(length, time, addedTime, incidentType);
   }
@@ -2211,10 +2179,20 @@ class _$InjuryTime implements InjuryTime {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -2224,6 +2202,7 @@ class _$InjuryTime implements InjuryTime {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (injuryTime != null) {
@@ -2240,9 +2219,10 @@ class _$InjuryTime implements InjuryTime {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return injuryTime(this);
   }
@@ -2255,9 +2235,10 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return injuryTime?.call(this);
   }
@@ -2270,9 +2251,10 @@ class _$InjuryTime implements InjuryTime {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (injuryTime != null) {
@@ -2293,6 +2275,351 @@ abstract class InjuryTime implements Incident {
   int? get time => throw _privateConstructorUsedError;
   int? get addedTime => throw _privateConstructorUsedError;
   String? get incidentType => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+
+@MappableClass(discriminatorValue: 'penaltyShootout')
+class _$PenaltyShootout implements PenaltyShootout {
+  const _$PenaltyShootout(
+      {this.player,
+      this.homeScore,
+      this.awayScore,
+      this.sequence,
+      this.description,
+      this.id,
+      this.incidentType,
+      this.isHome,
+      this.incidentClass});
+
+  @override
+  final Player? player;
+  @override
+  final int? homeScore;
+  @override
+  final int? awayScore;
+  @override
+  final int? sequence;
+  @override
+  final String? description;
+  @override
+  final int? id;
+  @override
+  final String? incidentType;
+  @override
+  final bool? isHome;
+  @override
+  final PenaltyShootoutIncidentClass? incidentClass;
+
+  @override
+  String toString() {
+    return 'Incident.penaltyShootout(player: $player, homeScore: $homeScore, awayScore: $awayScore, sequence: $sequence, description: $description, id: $id, incidentType: $incidentType, isHome: $isHome, incidentClass: $incidentClass)';
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)
+        substitution,
+    required TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)
+        card,
+    required TResult Function(String? text, int? homeScore, int? awayScore,
+            bool? isLive, int? time, int? addedTime, String? incidentType)
+        period,
+    required TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)
+        goal,
+    required TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)
+        varDecision,
+    required TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)
+        injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
+    required TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)
+        inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
+  }) {
+    return penaltyShootout(player, homeScore, awayScore, sequence, description,
+        id, incidentType, isHome, incidentClass);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)?
+        varDecision,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
+    TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)?
+        inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+  }) {
+    return penaltyShootout?.call(player, homeScore, awayScore, sequence,
+        description, id, incidentType, isHome, incidentClass);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)?
+        varDecision,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
+    TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)?
+        inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+    required TResult orElse(),
+  }) {
+    if (penaltyShootout != null) {
+      return penaltyShootout(player, homeScore, awayScore, sequence,
+          description, id, incidentType, isHome, incidentClass);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Substitution value) substitution,
+    required TResult Function(Card value) card,
+    required TResult Function(Period value) period,
+    required TResult Function(Goal value) goal,
+    required TResult Function(VarDecision value) varDecision,
+    required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
+    required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
+  }) {
+    return penaltyShootout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
+  }) {
+    return penaltyShootout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
+  }) {
+    if (penaltyShootout != null) {
+      return penaltyShootout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PenaltyShootout implements Incident {
+  const factory PenaltyShootout(
+      {final Player? player,
+      final int? homeScore,
+      final int? awayScore,
+      final int? sequence,
+      final String? description,
+      final int? id,
+      final String? incidentType,
+      final bool? isHome,
+      final PenaltyShootoutIncidentClass? incidentClass}) = _$PenaltyShootout;
+
+  Player? get player => throw _privateConstructorUsedError;
+  int? get homeScore => throw _privateConstructorUsedError;
+  int? get awayScore => throw _privateConstructorUsedError;
+  int? get sequence => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
+  String? get incidentType => throw _privateConstructorUsedError;
+  bool? get isHome => throw _privateConstructorUsedError;
+  PenaltyShootoutIncidentClass? get incidentClass =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2374,10 +2701,20 @@ class _$InGamePenalty implements InGamePenalty {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)
         varDecision,
-    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
     required TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)
         injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
     required TResult Function(
             int? time,
             Player? player,
@@ -2387,6 +2724,7 @@ class _$InGamePenalty implements InGamePenalty {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)
         inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
   }) {
     return inGamePenalty(
         time, player, description, id, incidentType, isHome, incidentClass);
@@ -2438,10 +2776,20 @@ class _$InGamePenalty implements InGamePenalty {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -2451,6 +2799,7 @@ class _$InGamePenalty implements InGamePenalty {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
   }) {
     return inGamePenalty?.call(
         time, player, description, id, incidentType, isHome, incidentClass);
@@ -2502,10 +2851,20 @@ class _$InGamePenalty implements InGamePenalty {
             VarDecisionIncidentClass? incidentClass,
             String? incidentType)?
         varDecision,
-    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     TResult Function(
             int? length, int? time, int? addedTime, String? incidentType)?
         injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
     TResult Function(
             int? time,
             Player? player,
@@ -2515,6 +2874,7 @@ class _$InGamePenalty implements InGamePenalty {
             bool? isHome,
             InGamePenaltyIncidentClass? incidentClass)?
         inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
     required TResult orElse(),
   }) {
     if (inGamePenalty != null) {
@@ -2532,9 +2892,10 @@ class _$InGamePenalty implements InGamePenalty {
     required TResult Function(Period value) period,
     required TResult Function(Goal value) goal,
     required TResult Function(VarDecision value) varDecision,
-    required TResult Function(Unknown value) unknown,
     required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
     required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
   }) {
     return inGamePenalty(this);
   }
@@ -2547,9 +2908,10 @@ class _$InGamePenalty implements InGamePenalty {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
   }) {
     return inGamePenalty?.call(this);
   }
@@ -2562,9 +2924,10 @@ class _$InGamePenalty implements InGamePenalty {
     TResult Function(Period value)? period,
     TResult Function(Goal value)? goal,
     TResult Function(VarDecision value)? varDecision,
-    TResult Function(Unknown value)? unknown,
     TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
     TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
     required TResult orElse(),
   }) {
     if (inGamePenalty != null) {
@@ -2591,5 +2954,311 @@ abstract class InGamePenalty implements Incident {
   String? get incidentType => throw _privateConstructorUsedError;
   bool? get isHome => throw _privateConstructorUsedError;
   InGamePenaltyIncidentClass? get incidentClass =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+
+@MappableClass(
+    discriminatorValue: MappableClass.useAsDefault, hooks: UnknownConverter())
+class _$Unknown implements Unknown {
+  const _$Unknown(final Map<String, dynamic> unknownIncident)
+      : _unknownIncident = unknownIncident;
+
+  final Map<String, dynamic> _unknownIncident;
+  @override
+  Map<String, dynamic> get unknownIncident {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(_unknownIncident);
+  }
+
+  @override
+  String toString() {
+    return 'Incident.unknown(unknownIncident: $unknownIncident)';
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)
+        substitution,
+    required TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)
+        card,
+    required TResult Function(String? text, int? homeScore, int? awayScore,
+            bool? isLive, int? time, int? addedTime, String? incidentType)
+        period,
+    required TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)
+        goal,
+    required TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)
+        varDecision,
+    required TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)
+        injuryTime,
+    required TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)
+        penaltyShootout,
+    required TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)
+        inGamePenalty,
+    required TResult Function(Map<String, dynamic> unknownIncident) unknown,
+  }) {
+    return unknown(unknownIncident);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)?
+        varDecision,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
+    TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)?
+        inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+  }) {
+    return unknown?.call(unknownIncident);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Player? playerIn,
+            Player? playerOut,
+            int? id,
+            int? time,
+            bool? injury,
+            bool? isHome,
+            SubstitutionIncidentClass? incidentClass,
+            String? incidentType)?
+        substitution,
+    TResult Function(
+            Player? player,
+            String? playerName,
+            String? reason,
+            int? id,
+            int? time,
+            bool? isHome,
+            CardIncidentClass? incidentClass,
+            String? incidentType)?
+        card,
+    TResult Function(String? text, int? homeScore, int? awayScore, bool? isLive,
+            int? time, int? addedTime, String? incidentType)?
+        period,
+    TResult Function(
+            int? homeScore,
+            int? awayScore,
+            Player? player,
+            Player? assist1,
+            int? id,
+            int? time,
+            bool? isHome,
+            GoalIncidentClass? incidentClass,
+            String? incidentType)?
+        goal,
+    TResult Function(
+            bool? confirmed,
+            Player? player,
+            bool? isHome,
+            int? id,
+            int? time,
+            VarDecisionIncidentClass? incidentClass,
+            String? incidentType)?
+        varDecision,
+    TResult Function(
+            int? length, int? time, int? addedTime, String? incidentType)?
+        injuryTime,
+    TResult Function(
+            Player? player,
+            int? homeScore,
+            int? awayScore,
+            int? sequence,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            PenaltyShootoutIncidentClass? incidentClass)?
+        penaltyShootout,
+    TResult Function(
+            int? time,
+            Player? player,
+            String? description,
+            int? id,
+            String? incidentType,
+            bool? isHome,
+            InGamePenaltyIncidentClass? incidentClass)?
+        inGamePenalty,
+    TResult Function(Map<String, dynamic> unknownIncident)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unknown != null) {
+      return unknown(unknownIncident);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(Substitution value) substitution,
+    required TResult Function(Card value) card,
+    required TResult Function(Period value) period,
+    required TResult Function(Goal value) goal,
+    required TResult Function(VarDecision value) varDecision,
+    required TResult Function(InjuryTime value) injuryTime,
+    required TResult Function(PenaltyShootout value) penaltyShootout,
+    required TResult Function(InGamePenalty value) inGamePenalty,
+    required TResult Function(Unknown value) unknown,
+  }) {
+    return unknown(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
+  }) {
+    return unknown?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(Substitution value)? substitution,
+    TResult Function(Card value)? card,
+    TResult Function(Period value)? period,
+    TResult Function(Goal value)? goal,
+    TResult Function(VarDecision value)? varDecision,
+    TResult Function(InjuryTime value)? injuryTime,
+    TResult Function(PenaltyShootout value)? penaltyShootout,
+    TResult Function(InGamePenalty value)? inGamePenalty,
+    TResult Function(Unknown value)? unknown,
+    required TResult orElse(),
+  }) {
+    if (unknown != null) {
+      return unknown(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Unknown implements Incident {
+  const factory Unknown(final Map<String, dynamic> unknownIncident) = _$Unknown;
+
+  Map<String, dynamic> get unknownIncident =>
       throw _privateConstructorUsedError;
 }

@@ -75,14 +75,6 @@ class Incident with _$Incident {
     String? incidentType,
   }) = VarDecision;
 
-  @MappableClass(
-    discriminatorValue: MappableClass.useAsDefault,
-    hooks: UnknownConverter(),
-  )
-  const factory Incident.unknown(
-    Map<String, dynamic> unknownIncident,
-  ) = Unknown;
-
   @MappableClass(discriminatorValue: 'injuryTime')
   const factory Incident.injuryTime({
     int? length,
@@ -90,6 +82,19 @@ class Incident with _$Incident {
     int? addedTime,
     String? incidentType,
   }) = InjuryTime;
+
+  @MappableClass(discriminatorValue: 'penaltyShootout')
+  const factory Incident.penaltyShootout({
+    Player? player,
+    int? homeScore,
+    int? awayScore,
+    int? sequence,
+    String? description,
+    int? id,
+    String? incidentType,
+    bool? isHome,
+    PenaltyShootoutIncidentClass? incidentClass,
+  }) = PenaltyShootout;
 
   @MappableClass(discriminatorValue: 'inGamePenalty')
   const factory Incident.inGamePenalty({
@@ -101,6 +106,14 @@ class Incident with _$Incident {
     bool? isHome,
     InGamePenaltyIncidentClass? incidentClass,
   }) = InGamePenalty;
+
+  @MappableClass(
+    discriminatorValue: MappableClass.useAsDefault,
+    hooks: UnknownConverter(),
+  )
+  const factory Incident.unknown(
+    Map<String, dynamic> unknownIncident,
+  ) = Unknown;
 
   factory Incident.fromJson(Map<String, dynamic> json) =>
       Mapper.fromMap<Incident>(json);
@@ -132,6 +145,12 @@ enum GoalIncidentClass {
 @MappableEnum()
 enum InGamePenaltyIncidentClass {
   missed,
+}
+
+@MappableEnum()
+enum PenaltyShootoutIncidentClass {
+  missed,
+  scored;
 }
 
 @MappableEnum()

@@ -15,15 +15,17 @@ var _mappers = <BaseMapper>{
   PeriodMapper._(),
   GoalMapper._(),
   VarDecisionMapper._(),
-  UnknownMapper._(),
   InjuryTimeMapper._(),
+  PenaltyShootoutMapper._(),
   InGamePenaltyMapper._(),
+  UnknownMapper._(),
   PlayerMapper._(),
   // enum mappers
   SubstitutionIncidentClassMapper._(),
   CardIncidentClassMapper._(),
   GoalIncidentClassMapper._(),
   InGamePenaltyIncidentClassMapper._(),
+  PenaltyShootoutIncidentClassMapper._(),
   VarDecisionIncidentClassMapper._(),
   // custom mappers
 };
@@ -41,6 +43,7 @@ class IncidentMapper extends BaseMapper<Incident> {
       case 'goal': return GoalMapper._().decode(map);
       case 'inGamePenalty': return InGamePenaltyMapper._().decode(map);
       case 'injuryTime': return InjuryTimeMapper._().decode(map);
+      case 'penaltyShootout': return PenaltyShootoutMapper._().decode(map);
       case 'period': return PeriodMapper._().decode(map);
       case 'substitution': return SubstitutionMapper._().decode(map);
       case 'varDecision': return VarDecisionMapper._().decode(map);
@@ -56,9 +59,10 @@ class IncidentMapper extends BaseMapper<Incident> {
     else if (v is Period) { return PeriodMapper._().encode(v); }
     else if (v is Goal) { return GoalMapper._().encode(v); }
     else if (v is VarDecision) { return VarDecisionMapper._().encode(v); }
-    else if (v is Unknown) { return UnknownMapper._().encode(v); }
     else if (v is InjuryTime) { return InjuryTimeMapper._().encode(v); }
+    else if (v is PenaltyShootout) { return PenaltyShootoutMapper._().encode(v); }
     else if (v is InGamePenalty) { return InGamePenaltyMapper._().encode(v); }
+    else if (v is Unknown) { return UnknownMapper._().encode(v); }
     else { return toMap(v); }
   }
   Map<String, dynamic> toMap(Incident i) => {};
@@ -280,42 +284,6 @@ class _VarDecisionCopyWithImpl<$R> extends BaseCopyWith<VarDecision, $R> impleme
   @override $R call({Object? confirmed = $none, Object? player = $none, Object? isHome = $none, Object? id = $none, Object? time = $none, Object? incidentClass = $none, Object? incidentType = $none}) => $then(VarDecision(confirmed: or(confirmed, $value.confirmed), player: or(player, $value.player), isHome: or(isHome, $value.isHome), id: or(id, $value.id), time: or(time, $value.time), incidentClass: or(incidentClass, $value.incidentClass), incidentType: or(incidentType, $value.incidentType)));
 }
 
-class UnknownMapper extends BaseMapper<Unknown> {
-  UnknownMapper._();
-
-  @override Function get decoder => decode;
-  Unknown decode(dynamic v) => const UnknownConverter().decode(v, (v) => checked(v, (Map<String, dynamic> map) => fromMap(map)));
-  Unknown fromMap(Map<String, dynamic> map) => Unknown(Mapper.i.$get(map, 'unknownIncident'));
-
-  @override Function get encoder => (Unknown v) => encode(v);
-  dynamic encode(Unknown v) => const UnknownConverter().encode<Unknown>(v, (v) => toMap(v));
-  Map<String, dynamic> toMap(Unknown u) => {'unknownIncident': Mapper.i.$enc(u.unknownIncident, 'unknownIncident')};
-
-  @override String stringify(Unknown self) => 'Unknown()';
-  @override int hash(Unknown self) => 0;
-  @override bool equals(Unknown self, Unknown other) => true;
-
-  @override Function get typeFactory => (f) => f<Unknown>();
-}
-
-extension UnknownMapperExtension  on Unknown {
-  String toJson() => Mapper.toJson(this);
-  Map<String, dynamic> toMap() => Mapper.toMap(this);
-  UnknownCopyWith<Unknown> get copyWith => UnknownCopyWith(this, $identity);
-}
-
-abstract class UnknownCopyWith<$R> {
-  factory UnknownCopyWith(Unknown value, Then<Unknown, $R> then) = _UnknownCopyWithImpl<$R>;
-  $R call({Map<String, dynamic>? unknownIncident});
-  $R apply(Unknown Function(Unknown) transform);
-}
-
-class _UnknownCopyWithImpl<$R> extends BaseCopyWith<Unknown, $R> implements UnknownCopyWith<$R> {
-  _UnknownCopyWithImpl(Unknown value, Then<Unknown, $R> then) : super(value, then);
-
-  @override $R call({Map<String, dynamic>? unknownIncident}) => $then(Unknown(unknownIncident ?? $value.unknownIncident));
-}
-
 class InjuryTimeMapper extends BaseMapper<InjuryTime> {
   InjuryTimeMapper._();
 
@@ -350,6 +318,44 @@ class _InjuryTimeCopyWithImpl<$R> extends BaseCopyWith<InjuryTime, $R> implement
   _InjuryTimeCopyWithImpl(InjuryTime value, Then<InjuryTime, $R> then) : super(value, then);
 
   @override $R call({Object? length = $none, Object? time = $none, Object? addedTime = $none, Object? incidentType = $none}) => $then(InjuryTime(length: or(length, $value.length), time: or(time, $value.time), addedTime: or(addedTime, $value.addedTime), incidentType: or(incidentType, $value.incidentType)));
+}
+
+class PenaltyShootoutMapper extends BaseMapper<PenaltyShootout> {
+  PenaltyShootoutMapper._();
+
+  @override Function get decoder => decode;
+  PenaltyShootout decode(dynamic v) => checked(v, (Map<String, dynamic> map) => fromMap(map));
+  PenaltyShootout fromMap(Map<String, dynamic> map) => PenaltyShootout(player: Mapper.i.$getOpt(map, 'player'), homeScore: Mapper.i.$getOpt(map, 'homeScore'), awayScore: Mapper.i.$getOpt(map, 'awayScore'), sequence: Mapper.i.$getOpt(map, 'sequence'), description: Mapper.i.$getOpt(map, 'description'), id: Mapper.i.$getOpt(map, 'id'), incidentType: Mapper.i.$getOpt(map, 'incidentType'), isHome: Mapper.i.$getOpt(map, 'isHome'), incidentClass: Mapper.i.$getOpt(map, 'incidentClass'));
+
+  @override Function get encoder => (PenaltyShootout v) => encode(v);
+  dynamic encode(PenaltyShootout v) => toMap(v);
+  Map<String, dynamic> toMap(PenaltyShootout p) => {'player': Mapper.i.$enc(p.player, 'player'), 'homeScore': Mapper.i.$enc(p.homeScore, 'homeScore'), 'awayScore': Mapper.i.$enc(p.awayScore, 'awayScore'), 'sequence': Mapper.i.$enc(p.sequence, 'sequence'), 'description': Mapper.i.$enc(p.description, 'description'), 'id': Mapper.i.$enc(p.id, 'id'), 'incidentType': Mapper.i.$enc(p.incidentType, 'incidentType'), 'isHome': Mapper.i.$enc(p.isHome, 'isHome'), 'incidentClass': Mapper.i.$enc(p.incidentClass, 'incidentClass')};
+
+  @override String stringify(PenaltyShootout self) => 'PenaltyShootout()';
+  @override int hash(PenaltyShootout self) => 0;
+  @override bool equals(PenaltyShootout self, PenaltyShootout other) => true;
+
+  @override Function get typeFactory => (f) => f<PenaltyShootout>();
+}
+
+extension PenaltyShootoutMapperExtension  on PenaltyShootout {
+  String toJson() => Mapper.toJson(this);
+  Map<String, dynamic> toMap() => Mapper.toMap(this);
+  PenaltyShootoutCopyWith<PenaltyShootout> get copyWith => PenaltyShootoutCopyWith(this, $identity);
+}
+
+abstract class PenaltyShootoutCopyWith<$R> {
+  factory PenaltyShootoutCopyWith(PenaltyShootout value, Then<PenaltyShootout, $R> then) = _PenaltyShootoutCopyWithImpl<$R>;
+  PlayerCopyWith<$R>? get player;
+  $R call({Player? player, int? homeScore, int? awayScore, int? sequence, String? description, int? id, String? incidentType, bool? isHome, String? incidentClass});
+  $R apply(PenaltyShootout Function(PenaltyShootout) transform);
+}
+
+class _PenaltyShootoutCopyWithImpl<$R> extends BaseCopyWith<PenaltyShootout, $R> implements PenaltyShootoutCopyWith<$R> {
+  _PenaltyShootoutCopyWithImpl(PenaltyShootout value, Then<PenaltyShootout, $R> then) : super(value, then);
+
+  @override PlayerCopyWith<$R>? get player => $value.player != null ? PlayerCopyWith($value.player!, (v) => call(player: v)) : null;
+  @override $R call({Object? player = $none, Object? homeScore = $none, Object? awayScore = $none, Object? sequence = $none, Object? description = $none, Object? id = $none, Object? incidentType = $none, Object? isHome = $none, Object? incidentClass = $none}) => $then(PenaltyShootout(player: or(player, $value.player), homeScore: or(homeScore, $value.homeScore), awayScore: or(awayScore, $value.awayScore), sequence: or(sequence, $value.sequence), description: or(description, $value.description), id: or(id, $value.id), incidentType: or(incidentType, $value.incidentType), isHome: or(isHome, $value.isHome), incidentClass: or(incidentClass, $value.incidentClass)));
 }
 
 class InGamePenaltyMapper extends BaseMapper<InGamePenalty> {
@@ -388,6 +394,42 @@ class _InGamePenaltyCopyWithImpl<$R> extends BaseCopyWith<InGamePenalty, $R> imp
 
   @override PlayerCopyWith<$R>? get player => $value.player != null ? PlayerCopyWith($value.player!, (v) => call(player: v)) : null;
   @override $R call({Object? time = $none, Object? player = $none, Object? description = $none, Object? id = $none, Object? incidentType = $none, Object? isHome = $none, Object? incidentClass = $none}) => $then(InGamePenalty(time: or(time, $value.time), player: or(player, $value.player), description: or(description, $value.description), id: or(id, $value.id), incidentType: or(incidentType, $value.incidentType), isHome: or(isHome, $value.isHome), incidentClass: or(incidentClass, $value.incidentClass)));
+}
+
+class UnknownMapper extends BaseMapper<Unknown> {
+  UnknownMapper._();
+
+  @override Function get decoder => decode;
+  Unknown decode(dynamic v) => const UnknownConverter().decode(v, (v) => checked(v, (Map<String, dynamic> map) => fromMap(map)));
+  Unknown fromMap(Map<String, dynamic> map) => Unknown(Mapper.i.$get(map, 'unknownIncident'));
+
+  @override Function get encoder => (Unknown v) => encode(v);
+  dynamic encode(Unknown v) => const UnknownConverter().encode<Unknown>(v, (v) => toMap(v));
+  Map<String, dynamic> toMap(Unknown u) => {'unknownIncident': Mapper.i.$enc(u.unknownIncident, 'unknownIncident')};
+
+  @override String stringify(Unknown self) => 'Unknown()';
+  @override int hash(Unknown self) => 0;
+  @override bool equals(Unknown self, Unknown other) => true;
+
+  @override Function get typeFactory => (f) => f<Unknown>();
+}
+
+extension UnknownMapperExtension  on Unknown {
+  String toJson() => Mapper.toJson(this);
+  Map<String, dynamic> toMap() => Mapper.toMap(this);
+  UnknownCopyWith<Unknown> get copyWith => UnknownCopyWith(this, $identity);
+}
+
+abstract class UnknownCopyWith<$R> {
+  factory UnknownCopyWith(Unknown value, Then<Unknown, $R> then) = _UnknownCopyWithImpl<$R>;
+  $R call({Map<String, dynamic>? unknownIncident});
+  $R apply(Unknown Function(Unknown) transform);
+}
+
+class _UnknownCopyWithImpl<$R> extends BaseCopyWith<Unknown, $R> implements UnknownCopyWith<$R> {
+  _UnknownCopyWithImpl(Unknown value, Then<Unknown, $R> then) : super(value, then);
+
+  @override $R call({Map<String, dynamic>? unknownIncident}) => $then(Unknown(unknownIncident ?? $value.unknownIncident));
 }
 
 class PlayerMapper extends BaseMapper<Player> {
@@ -524,6 +566,31 @@ class InGamePenaltyIncidentClassMapper extends EnumMapper<InGamePenaltyIncidentC
 }
 
 extension InGamePenaltyIncidentClassMapperExtension on InGamePenaltyIncidentClass {
+  dynamic toValue() => Mapper.toValue(this);
+  @Deprecated('Use \'toValue\' instead')
+  String toStringValue() => Mapper.toValue(this) as String;
+}
+
+class PenaltyShootoutIncidentClassMapper extends EnumMapper<PenaltyShootoutIncidentClass> {
+  PenaltyShootoutIncidentClassMapper._();
+
+  @override  PenaltyShootoutIncidentClass decode(dynamic value) {
+    switch (value) {
+      case 'missed': return PenaltyShootoutIncidentClass.missed;
+      case 'scored': return PenaltyShootoutIncidentClass.scored;
+      default: throw MapperException.unknownEnumValue(value);
+    }
+  }
+
+  @override  dynamic encode(PenaltyShootoutIncidentClass self) {
+    switch (self) {
+      case PenaltyShootoutIncidentClass.missed: return 'missed';
+      case PenaltyShootoutIncidentClass.scored: return 'scored';
+    }
+  }
+}
+
+extension PenaltyShootoutIncidentClassMapperExtension on PenaltyShootoutIncidentClass {
   dynamic toValue() => Mapper.toValue(this);
   @Deprecated('Use \'toValue\' instead')
   String toStringValue() => Mapper.toValue(this) as String;
