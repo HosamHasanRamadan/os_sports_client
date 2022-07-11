@@ -384,7 +384,7 @@ extension InGamePenaltyMapperExtension  on InGamePenalty {
 abstract class InGamePenaltyCopyWith<$R> {
   factory InGamePenaltyCopyWith(InGamePenalty value, Then<InGamePenalty, $R> then) = _InGamePenaltyCopyWithImpl<$R>;
   PlayerCopyWith<$R>? get player;
-  $R call({int? time, Player? player, String? description, int? id, String? incidentType, bool? isHome, dynamic incidentClass});
+  $R call({int? time, Player? player, String? description, int? id, String? incidentType, bool? isHome, PenaltyIncidentClass? incidentClass});
   $R apply(InGamePenalty Function(InGamePenalty) transform);
 }
 

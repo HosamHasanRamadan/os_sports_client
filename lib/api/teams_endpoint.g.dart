@@ -3,6 +3,23 @@
 part of 'teams_endpoint.dart';
 
 // **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+ImageUrl _$ImageUrlFromJson(Map<String, dynamic> json) => ImageUrl(
+      url: Uri.parse(json['url'] as String),
+      headers: (json['headers'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String),
+          ) ??
+          const {},
+    );
+
+Map<String, dynamic> _$ImageUrlToJson(ImageUrl instance) => <String, dynamic>{
+      'url': instance.url.toString(),
+      'headers': instance.headers,
+    };
+
+// **************************************************************************
 // RetrofitGenerator
 // **************************************************************************
 
@@ -193,17 +210,33 @@ class _TeamsEndpoint implements TeamsEndpoint {
   }
 
   @override
-  Future<String> getTeamLogo({required teamId}) async {
+  Future<List<int>> getTeamLogo({required teamId}) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{r'team_id': teamId};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<String>(_setStreamType<String>(
+    final _result = await _dio.fetch<List<dynamic>>(_setStreamType<List<int>>(
         Options(method: 'GET', headers: _headers, extra: _extra)
             .compose(_dio.options, '/teams/logo',
                 queryParameters: queryParameters, data: _data)
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = _result.data!;
+    final value = _result.data!.cast<int>();
+    return value;
+  }
+
+  @override
+  Future<ImageUrl> getTeamLogoImageUrl({required teamId}) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{r'team_id': teamId};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ImageUrl>(
+            Options(method: 'GET', headers: _headers, extra: _extra)
+                .compose(_dio.options, '/teams/image',
+                    queryParameters: queryParameters, data: _data)
+                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ImageUrl.fromJson(_result.data!);
     return value;
   }
 
