@@ -124,7 +124,7 @@ class _TeamsEndpointX extends _TeamsEndpoint {
 
   @override
   Future<List<int>> getTeamLogo({required int teamId}) async {
-    final path = 'teams/logo';
+    final path = '/teams/logo';
     final response = await dio.get<List<int>>(
       path,
       queryParameters: {'team_id': teamId},
